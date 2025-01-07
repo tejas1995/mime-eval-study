@@ -15,12 +15,27 @@ random.seed(args.seed)
 
 data = json.load(open(args.data))
 
+# Calculate the total number of instances required
+total_instances_required = args.num_instances_per_queue * args.num_queues
+
+# Check if there are enough questions in the data
+if total_instances_required > len(data):
+    raise ValueError(
+        f"Not enough data to create {args.num_queues} queues with {args.num_instances_per_queue} instances each. "
+        f"Required: {total_instances_required}, Available: {len(data)}."
+    )
+
+# Shuffle the data to ensure randomness
+random.shuffle(data)
+
 out_dirname = f"web/baked_queues/{args.name}_q{args.num_queues}_i{args.num_instances_per_queue}_s{args.seed}"
 os.makedirs(out_dirname, exist_ok=True)
 
 for uid in list(range(args.num_queues)):
-    sampled_data = random.sample(data, args.num_instances_per_queue)
-    random.shuffle(sampled_data)
+    start_idx = uid * args.num_instances_per_queue
+    end_idx = start_idx + args.num_instances_per_queue
+    sampled_data = data[start_idx:end_idx]
+    
     out_file = f"{out_dirname}/{uid:0>3}.json"
     if os.path.exists(out_file):
         print(f"Overwriting {out_file}")
