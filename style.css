@@ -202,7 +202,7 @@ input[type="button"]:hover:not([disabled]) {
 }
 
 .info-icon:hover::after {
-    content: attr(title);
+    content: attr(data-title);
     position: absolute;
     top: 120%;
     left: 50%;
@@ -211,9 +211,12 @@ input[type="button"]:hover:not([disabled]) {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    white-space: nowrap;
+    white-space: pre-line;
     z-index: 10;
     font-size: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    min-width: 250px;
+    text-align: left; /* Ensure text alignment is readable */
 }
 
