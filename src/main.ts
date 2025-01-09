@@ -172,9 +172,161 @@ function update_balance() {
     }
 }
 
-function next_question() {
-    // restore previous state of UI
+let activeTimer: ReturnType<typeof setInterval> | null = null; // Timer interval
 
+function startTimer(duration, stepDiv, buttons, callback) {
+    // Clear any existing timer to prevent multiple intervals
+    if (activeTimer) {
+        clearInterval(activeTimer);
+        activeTimer = null;
+    }
+
+    // Disable buttons
+    buttons.forEach(button => button.setAttribute("disabled", "true"));
+    
+    // Show timer visually
+    let timerDisplay = document.createElement('div');
+    timerDisplay.id = `timer_${stepDiv.id}`;
+    timerDisplay.style.fontWeight = 'bold';
+    stepDiv.appendChild(timerDisplay);
+
+    let remainingTime = duration;
+
+    // Initial display
+    timerDisplay.textContent = `Please wait ${remainingTime} second(s) before making your selection.`;
+
+    activeTimer = setInterval(() => {
+        remainingTime--;
+        if (remainingTime >= 0) {
+            timerDisplay.textContent = `Please wait ${remainingTime} second(s) before making your selection.`;
+        } else {
+
+            if (activeTimer !== null) {
+                clearInterval(activeTimer); // Stop the timer
+                activeTimer = null;
+            }
+            activeTimer = null;
+
+            // Remove timer display
+            stepDiv.removeChild(timerDisplay);
+
+            // Enable buttons
+            buttons.forEach(button => button.removeAttribute("disabled"));
+
+            if (callback) callback();
+        }
+    }, 1000);
+}
+
+// When the user switches tabs or minimizes the window, pause the timer
+document.onvisibilitychange = () => {
+    if (document.hidden) {
+        console.log("Window lost focus.");
+        if (activeTimer !== null) {
+            clearInterval(activeTimer); // Pause the timer
+            activeTimer = null;
+        }
+    } else {
+        // Handle logic when the user returns
+        console.log("Window regained focus.");
+    }
+};
+
+// First step: enforce a 5-second wait
+function setupFirstStep(explanationText) {
+    const firstStepDiv = document.getElementById('ai_answer_div');
+    const buttons = [
+        document.getElementById('button_answeronly_usertrusts'),
+        document.getElementById('button_answeronly_userdistrusts'),
+        document.getElementById('button_answeronly_userunsure')
+    ];
+
+    buttons.forEach(button => button?.removeEventListener('click', handleFirstStepClick)); // Remove old listeners
+    buttons.forEach(button => button?.addEventListener('click', handleFirstStepClick)); // Add new ones
+
+    function handleFirstStepClick() {
+        buttons.forEach(button => button?.removeEventListener('click', handleFirstStepClick)); // Cleanup
+        setupSecondStep(explanationText);
+    }
+
+    $("#ai_answer_div").show();
+    startTimer(5, firstStepDiv, buttons, null);
+    // $("#ai_answer_div").show(); // Show the first step
+    // startTimer(5, firstStepDiv, buttons, () => {
+    //     // Buttons are now enabled; user must click one to proceed
+    //     buttons.forEach(button => {
+    //         button?.addEventListener(
+    //             'click',
+    //             () => {
+    //                 setupSecondStep(explanationText); // Proceed to the second step after button click
+    //             },
+    //             { once: true } // Ensure the event listener is executed only once
+    //         );
+    //     });
+    // });
+}
+
+// Second step timer (dynamic based on reading time)
+function setupSecondStep(explanationText) {
+    const secondStepDiv = document.getElementById('ai_explanation_div');
+    const words = explanationText.split(' ').length;
+    const readingTime = Math.max(Math.ceil(3 + (words / 238) * 60), 5);
+
+    const buttons = [
+        document.getElementById('button_withexplanation_usertrusts'),
+        document.getElementById('button_withexplanation_userdistrusts'),
+        document.getElementById('button_withexplanation_userunsure')
+    ];
+
+    // Remove old event listeners
+    buttons.forEach(button => button?.removeEventListener('click', handleSecondStepClick));
+
+    // Add new event listeners
+    buttons.forEach(button => button?.addEventListener('click', handleSecondStepClick));
+
+    function handleSecondStepClick() {
+        // Cleanup: remove event listeners
+        buttons.forEach(button => button?.removeEventListener('click', handleSecondStepClick));
+        setupThirdStep(explanationText);
+    }
+
+    $("#ai_explanation_div").show(); // Show the second step
+    startTimer(readingTime, secondStepDiv, buttons, null); // Start timer
+}
+
+// Third step timer (5 seconds)
+function setupThirdStep(explanationText) {
+    const thirdStepDiv = document.getElementById('ai_explanation_quality_div');
+    const buttons = [
+        document.getElementById('button_withexplanationquality_usertrusts'),
+        document.getElementById('button_withexplanationquality_userdistrusts'),
+        document.getElementById('button_withexplanationquality_userunsure')
+    ];
+
+    // Remove old event listeners
+    buttons.forEach(button => button?.removeEventListener('click', handleThirdStepClick));
+
+    // Add new event listeners
+    buttons.forEach(button => button?.addEventListener('click', handleThirdStepClick));
+
+    function handleThirdStepClick() {
+        // Cleanup: remove event listeners
+        buttons.forEach(button => button?.removeEventListener('click', handleThirdStepClick));
+        $("#button_next").show(); // Enable the next question button
+    }
+
+    $("#ai_explanation_quality_div").show(); // Show the third step
+    startTimer(5, thirdStepDiv, buttons, null); // Start timer
+}
+
+function next_question() {
+    // Reset timers and state
+    if (activeTimer) {
+        clearInterval(activeTimer);
+        activeTimer = null;
+    }
+
+    // restore previous state of UI
     $("#button_readytoanswer").removeAttr("activedecision")
     $("#button_readytoanswer").removeAttr("disabled")
     $("#button_readytoanswer").show()
@@ -222,11 +374,13 @@ function next_question() {
         }
         return
     }
+
     question = data[question_i]
 
     $("#question_span").html(question!["question"])
     $("#ai_prediction_span").html(question!["predicted_answer"])
     $("#ai_explanation_span").html(question!["generated_rationale"])
+
     let visual_fidelity_conf = Math.round(question!["visual fidelity"] * 100)
     $("#explanation_fidelity_span").html(`${visual_fidelity_conf}%`)
     let visual_contrastiveness_conf = Math.round(question!["contrastiveness"] * 100)
@@ -245,6 +399,8 @@ function next_question() {
 
     //time_question_start = Date.now()
     $("#progress").text(`Progress: ${question_i + 1} / ${data.length}`)
+
+    setupFirstStep(question["generated_rationale"]);
 }
 
 // get user id and load queue
