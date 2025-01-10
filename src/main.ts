@@ -1,4 +1,4 @@
-import { DEVMODE, REWARD_CORRECT, PENALTY_INCORRECT } from "./globals"
+import { DEVMODE, REWARD_CORRECT, PENALTY_INCORRECT, ENABLE_TIMER } from "./globals"
 export var UID: string
 export var MOCKMODE: boolean = false
 import { load_data, log_data } from './connector'
@@ -194,6 +194,13 @@ function finalize_balance() {
 let activeTimer: ReturnType<typeof setInterval> | null = null; // Timer interval
 
 function startTimer(duration, stepDiv, buttons, callback) {
+    if (!ENABLE_TIMER) {
+        // If the timer is disabled, enable the buttons immediately
+        buttons.forEach(button => button.removeAttribute("disabled"));
+        if (callback) callback();
+        return;
+    }
+
     // Clear any existing timer to prevent multiple intervals
     if (activeTimer) {
         clearInterval(activeTimer);
