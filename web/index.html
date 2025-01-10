@@ -6,6 +6,7 @@
     <meta http-equiv="Cache-control" content="public">
     <title>AI Confidence</title>
     <link rel="shortcut icon" href="#" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -23,7 +24,7 @@
             <div style="margin-top: 30px;  text-align: justify;">
                 <ul>
                     <li style="margin: 10px 0;">In this experiment, you are working with an AI that is answering questions about images. You cannot see the image, you can only see the AI's answer. Your task is to decide if you trust the AI's answer or not.</li>
-                    <li style="margin: 10px 0;">If your decision is correct, you gain a reward of $0.10. You will see your total reward at the end of the experiment. Your payment is $2.0 plus whatever you accumulate during this experiment.</li>
+                    <li style="margin: 10px 0;" id="reward_instructions"></li>
                     <li style="margin: 10px 0;">To help you make your decision, you will see the AI's answer, along with an explanation, and some information about how reliable the explanation is. After getting each piece of additional information, you will be asked whether you think the AI is correct or not.</li>
                 </ul>
 
@@ -73,7 +74,24 @@
                 <img src="img/instructions_3.png">
             </div>
             <div id="instructions_4">
-                Finally, you will be provided with some information about how reliable the explanation is. You will be asked again whether you think the AI's answer is correct or not.
+                Finally, you will be provided with some information about how reliable the explanation is.
+                You will be shown two scores:
+                <p style="font-weight: bold">
+                    1. AI Confidence that all the visual details in the explanation are correct.
+                </p>
+                
+                <div style="margin-bottom: 10px; padding-left: 20px">
+                    This score reflects how certain the AI is that the details about the image mentioned in the explanation are all accurate.
+                </div>
+
+                <p style="font-weight: bold">
+                    2. AI Confidence that the other options are incorrect.
+                </p>
+                <div style="margin-bottom: 10px; padding-left: 20px">
+                    This score reflects how certain the AI is that none of the other (non-predicted) choices are correct, based on the provided explanation.
+                </div>
+                
+                You will be asked again whether you think the AI's answer is correct or not.
                 <br>
                 <img src="img/instructions_4.png">
             </div>
@@ -136,23 +154,17 @@
                 <p style="font-weight: bold; font-size: 18px">
                     AI Confidence that all the visual details in the explanation are correct: 
                     <span id="explanation_fidelity_span">XXX</span>
-                    <span class="info-icon" data-title="This score reflects how certain the AI is that every visual detail it mentioned truly appears in the image. 
-                    • 100% means the AI confirmed all those details are indeed present. 
-                    • 0% means the AI found them absent or incorrect. 
-                    Values in between imply partial confidence: some details might match while others might not.">&#9432</span>
+                    <span class="info-icon" data-title="This score reflects how certain the AI is that the details about the image mentioned in the explanation are all accurate.">&#9432</span>
                 </p>
                 <p style="font-weight: bold; font-size: 18px">
                     AI Confidence that the other options are incorrect: 
                     <span id="explanation_contrastiveness_span">YYY</span>
-                    <span class="info-icon" data-title="This score reflects how certain the AI is that no alternative answer is correct. 
-                    • 100% means the AI is fully convinced that its answer is the only correct one. 
-                    • 0% means the AI suspects at least one other option could be correct, AND it has no confidence that the proposed answer is correct. 
-                    Values in between imply varying degrees of confidence in ruling out other answers.">&#9432</span>
+                    <span class="info-icon" data-title="This score reflects how certain the AI is that none of the other (non-predicted) choices are correct, based on the provided explanation.">&#9432</span>
                 </p>
                 <div id="withexplanation_decision_div">
                     <input id="button_withexplanationquality_usertrusts" type="button" class="button-neutral button-decision" value="The AI's answer is correct.">
                     <input id="button_withexplanationquality_userdistrusts" type="button" class="button-neutral button-decision" value="The AI's answer is incorrect.">
-                    <input id="button_withexplanationquality_userunsure" type="button" class="button-neutral button-decision" value="I am still unsure.">
+                    <input id="button_withexplanationquality_userunsure" type="button" class="button-neutral button-decision" value="I am unsure based on the informations provided.">
                 </div>        
             </div>
 
@@ -173,6 +185,7 @@
         var randomNum = String((Math.floor(Math.random() * 10e10)));
         document.getElementById('nocachescript').src = "web.js?t=" + randomNum;
     </script>
+    <script type="module" src="./globals.js" defer></script>
 </body>
 
 </html>

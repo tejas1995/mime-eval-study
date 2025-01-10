@@ -1,4 +1,4 @@
-import { DEVMODE } from "./globals"
+import { DEVMODE, REWARD_CORRECT, PENALTY_INCORRECT } from "./globals"
 export var UID: string
 export var MOCKMODE: boolean = false
 import { load_data, log_data } from './connector'
@@ -12,7 +12,6 @@ let userselection_withexplanation: number = -1
 let userselection_withexplanationquality: number = -1
 
 let balance = 0
-let balance_increment = 0.1     // Balance updates by $0.10 for every correct selection
 
 let instruction_i: number = 0
 let count_exited_page: number = 0
@@ -86,7 +85,20 @@ document.getElementById('button_withexplanationquality_userdistrusts')?.addEvent
 document.getElementById('button_withexplanationquality_userunsure')?.addEventListener('click', () => registerWithExplanationQualityUserSelection(2));
 
 
+function updateRewardInstructions() {
+    const rewardInstructions = document.getElementById('reward_instructions');
 
+    if (rewardInstructions) {
+        rewardInstructions.innerHTML = `
+            If your final decision is correct, you gain a reward of $${REWARD_CORRECT.toFixed(2)}. 
+            If your final decision is incorrect, you lose $${Math.abs(PENALTY_INCORRECT).toFixed(2)} from your reward. 
+            You will see your total reward at the end of the experiment. 
+            Your payment is $2.0 plus whatever you accumulate during this experiment.
+        `;
+        // If your final decision is correct, you gain a reward of $0.10. If your final decision is incorrect, you lose $0.10 from your reward.
+        // You will see your total reward at the end of the experiment. Your payment is $2.0 plus whatever you accumulate during this experiment.
+    }
+}
 
 function next_instructions(increment: number) {
     instruction_i += increment
@@ -154,7 +166,6 @@ $("#button_next").on("click", () => {
 });
 
 
-
 function is_user_correct(selection) {
     if (selection != 2) {
         let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
@@ -167,9 +178,17 @@ function update_balance() {
     if (userselection_withexplanationquality != 2) {
         let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
         if (userselection_withexplanationquality == correct_selection) {
-            balance += balance_increment
+            balance += REWARD_CORRECT;
+        } else {
+            balance += PENALTY_INCORRECT;
         }
     }
+}
+
+// To ensure balance is non-negative
+function finalize_balance() {
+    balance = Math.max(0, balance);
+    return balance;
 }
 
 let activeTimer: ReturnType<typeof setInterval> | null = null; // Timer interval
@@ -363,6 +382,8 @@ function next_question() {
     question_i += 1
     if (question_i >= data.length) {
         $("#main_box_experiment").hide()
+        balance = finalize_balance()
+
         if (MOCKMODE) {
             $('#reward_box_mock').text(`Your total reward is $${balance.toFixed(2)} (${question_i} questions answered) + $2.`)
             $('#reward_box_mock').show()
@@ -377,7 +398,10 @@ function next_question() {
 
     question = data[question_i]
 
-    $("#question_span").html(question!["question"])
+    const questionText = question!["question"];
+    const updatedQuestionText = questionText.replace("Choices:", "<br><b>Choices:</b>");
+    $("#question_span").html(updatedQuestionText);
+
     $("#ai_prediction_span").html(question!["predicted_answer"])
     $("#ai_explanation_span").html(question!["generated_rationale"])
 
@@ -402,6 +426,8 @@ function next_question() {
 
     setupFirstStep(question["generated_rationale"]);
 }
+
+
 
 // get user id and load queue
 // try to see if start override was passed
@@ -458,6 +484,7 @@ load_data().catch((_error) => {
     }
     // next_question()
     next_instructions(0)
+    updateRewardInstructions();
     $("#main_box_instructions").show()
     $("#instructions_and_decorations").hide()
 })
