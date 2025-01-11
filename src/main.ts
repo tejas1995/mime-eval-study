@@ -10,6 +10,9 @@ let question: any = null
 let userselection_answeronly: number = -1
 let userselection_withexplanation: number = -1
 let userselection_withexplanationquality: number = -1
+let num_correct = 0
+let num_incorrect = 0
+let num_unsure = 0
 
 let balance = 0
 
@@ -179,9 +182,13 @@ function update_balance() {
         let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
         if (userselection_withexplanationquality == correct_selection) {
             balance += REWARD_CORRECT;
+            num_correct += 1;
         } else {
             balance += PENALTY_INCORRECT;
+            num_incorrect += 1;
         }
+    } else {
+        num_unsure += 1;
     }
 }
 
@@ -214,6 +221,7 @@ function startTimer(duration, stepDiv, buttons, callback) {
     let timerDisplay = document.createElement('div');
     timerDisplay.id = `timer_${stepDiv.id}`;
     timerDisplay.style.fontWeight = 'bold';
+    timerDisplay.style.marginTop = '10px';
     stepDiv.appendChild(timerDisplay);
 
     let remainingTime = duration;
@@ -391,12 +399,14 @@ function next_question() {
         $("#main_box_experiment").hide()
         balance = finalize_balance()
 
+        let reward_text = `Your total reward is <b>$${balance.toFixed(2)} + $2</b>.`
+        reward_text += `<br>You answered a total of ${question_i} questions: ${num_correct} correct, ${num_incorrect} incorrect, ${num_unsure} unsure.`
         if (MOCKMODE) {
-            $('#reward_box_mock').text(`Your total reward is $${balance.toFixed(2)} (${question_i} questions answered) + $2.`)
+            $('#reward_box_mock').html(reward_text)
             $('#reward_box_mock').show()
             $("#main_box_end_mock").show()
         } else {
-            $('#reward_box').text(`Your total reward is $${balance.toFixed(2)} (${question_i} questions answered) + $2.`)
+            $('#reward_box').html(reward_text)
             $('#reward_box').show()
             $("#main_box_end").show()
         }
