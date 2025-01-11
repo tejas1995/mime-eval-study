@@ -422,7 +422,7 @@ function next_question() {
     $("#ai_prediction_span").html(question!["predicted_answer"])
     $("#ai_explanation_span").html(question!["generated_rationale"])
 
-    let visual_fidelity_conf = Math.round(question!["visual fidelity"] * 100)
+    let visual_fidelity_conf = Math.round(question!["visual_fidelity"] * 100)
     $("#explanation_fidelity_span").html(`${visual_fidelity_conf}%`)
     let visual_contrastiveness_conf = Math.round(question!["contrastiveness"] * 100)
     $("#explanation_contrastiveness_span").html(`${visual_contrastiveness_conf}%`)
