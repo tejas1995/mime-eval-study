@@ -506,6 +506,32 @@ load_data().catch((_error) => {
     $("#instructions_and_decorations").hide()
 })
 
+// // Dynamically load dataset based on DATASET
+// fetch(`./baked_queues/${DATASET}`)
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error("Failed to load dataset.");
+//         }
+//         return response.json();
+//     })
+//     .then((new_data) => {
+//         data = new_data;
+//         if (startOverride != null) {
+//             question_i = parseInt(startOverride) - 1;
+//             console.log("Starting from", question_i);
+//         }
+//         next_instructions(0);
+//         updateRewardInstructions();
+//         $("#main_box_instructions").show();
+//         $("#instructions_and_decorations").hide();
+//     })
+//     .catch((_error) => {
+//         console.error("Invalid user id or dataset loading failed.");
+//         console.log(globalThis.uid!);
+//         window.location.reload();
+//     });
+
+
 console.log("Starting session with UID:", globalThis.uid!)
 
 let alert_active = false
@@ -513,9 +539,13 @@ document.onvisibilitychange = () => {
     if (!alert_active) {
         count_exited_page += 1
         alert_active = true
-        //if (!(globalThis.uid!.startsWith("demo"))) {
-        //    alert("Please don't leave the page. If you do so again, we may restrict paying you.")
-        //}
+        if (!(globalThis.uid!.startsWith("demo"))) {
+            // pause the timer
+           alert("Please don't leave the page. If you do so again, we may restrict paying you.")
+        }
         alert_active = false
+    }
+    else{
+        //continue the timer?
     }
 }

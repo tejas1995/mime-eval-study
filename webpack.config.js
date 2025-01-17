@@ -1,7 +1,17 @@
 const path = require('path');
 var webpack = require("webpack");
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, argv) => {
+   // Get the dataset from environment variables
+   // const dataset = env && env.DATASET
+   // if (!dataset) {
+   //    throw new Error("Please provide the dataset filename in the environment variable DATASET")
+   // }
+
+   // const datasets = Array.from({ length: 20 }, (_, i) => `llava1.5_with_image_q20_i10_s0/${String(i).padStart(3, '0')}.json`);
+
+   // return datasets.map(dataset => ({
    return {
       entry: './src/main.ts',
       devtool: 'inline-source-map',
@@ -20,6 +30,7 @@ module.exports = (env, argv) => {
       output: {
          filename: 'web.js',
          path: path.resolve(__dirname, 'web')
+         // path: path.resolve(__dirname, `web/${path.basename(dataset, '.json')}`)  // Output to separate folders
       },
       devServer: {
          static: {
@@ -31,11 +42,21 @@ module.exports = (env, argv) => {
       plugins: [
          new webpack.DefinePlugin({
             _DEVMODE: !!(argv.mode == 'development')
-         })
+            // _DATASET: JSON.stringify(dataset)  // Inject dataset filename
+         }),
+         // // Copy index.html, style.css, and baked_queues into each build folder
+         // new CopyWebpackPlugin({
+         //    patterns: [
+         //        { from: 'web/index.html', to: '' },  // Copy index.html
+         //        { from: 'web/style.css', to: '' },   // Copy CSS
+         //        { from: 'web/baked_queues', to: 'baked_queues' },  // Copy datasets
+         //        { from: 'web/img', to: 'img' } // Copy images
+         //    ]
+         // })
       ],
       // ignore file size warning
       performance: {
          hints: false,
       },
-   }
+   };
 };
