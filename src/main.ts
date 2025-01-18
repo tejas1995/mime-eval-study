@@ -133,6 +133,17 @@ function next_instructions(increment: number) {
 $("#button_instructions_next").on("click", () => next_instructions(+1))
 $("#button_instructions_prev").on("click", () => next_instructions(-1))
 
+function utility_of_selection(selection: number) {
+    let utility: number = 0
+    if (selection == 2) {
+        utility = 0
+    } else {
+        let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
+        utility = (selection == correct_selection) ? 1 : -1
+    }
+    return utility
+}
+
 $("#button_next").on("click", () => {
 
     // Update the user balance
@@ -152,6 +163,8 @@ $("#button_next").on("click", () => {
                 "withexplanation": is_user_correct(userselection_withexplanation),
                 "withexplanationquality": is_user_correct(userselection_withexplanationquality)
             },
+            "utility_of_explanation": utility_of_selection(userselection_withexplanation) - utility_of_selection(userselection_answeronly),
+            "utility_of_quality_metrics": utility_of_selection(userselection_withexplanationquality) - utility_of_selection(userselection_withexplanation),
             "balance": {
                 "old": old_balance,
                 "new": balance
