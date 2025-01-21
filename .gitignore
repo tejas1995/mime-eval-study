@@ -169,4 +169,5 @@ web/web.js
 web/data
 #data/
 ./package-lock.json
-src_utils/secret.py
+secret.py
+tmp.jsonl

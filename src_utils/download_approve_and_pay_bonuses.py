@@ -22,9 +22,9 @@ def get_submissions(study_id):
 def display_interaction_summary(uid, interaction_summary):
     print(f"UID: {uid}")
     print(f"\tBalance: ${interaction_summary['balance']:.2f}")
-    print(f"\tAccuracy with only answer: {interaction_summary['accuracy_answeronly']:.2%}")
-    print(f"\tAccuracy with explanation: {interaction_summary['accuracy_withexplanation']:.2%}")
-    print(f"\tAccuracy with explanation quality: {interaction_summary['accuracy_withexplanationquality']:.2%}")
+    print(f"\tAnswer only: {interaction_summary['answeronly_summary']['num_unsures']} unsure, {interaction_summary['answeronly_summary']['num_correct']} correct, {interaction_summary['answeronly_summary']['num_incorrect']} incorrect")
+    print(f"\tWith explanation: {interaction_summary['withexplanation_summary']['num_unsures']} unsure, {interaction_summary['withexplanation_summary']['num_correct']} correct, {interaction_summary['withexplanation_summary']['num_incorrect']} incorrect")
+    print(f"\tWith explanation quality: {interaction_summary['withexplanationquality_summary']['num_unsures']} unsure, {interaction_summary['withexplanationquality_summary']['num_correct']} correct, {interaction_summary['withexplanationquality_summary']['num_incorrect']} incorrect")
     print(f"\tNumber of exits: {interaction_summary['num_exits']}")
 
 def reject_submission(submission_id, participant_id, message, rejection_category):
@@ -70,7 +70,7 @@ def approve_and_pay_bonuses(study_id, session_id, participant_id, bonus_payment)
     d = r.json()
     print(f'status: {d["status"]}, participant: {d["participant"]}')
 
-    if float(bonus_payment) == 0:
+    if float(bonus_payment) <= 0.0:
         print(f"Bonus payment is 0, not setting up bonus payment.")
         return
 
@@ -105,10 +105,10 @@ if __name__ == '__main__':
     parser.add_argument('--study_name', type=str, required=True)
     args = parser.parse_args()
 
-    interaction_data_filename = f"study_data/batch_interaction_data/{args.study_name}.json"
-    batch_summaries_filename = f"study_data/batch_summaries/{args.study_name}.tsv"
+    interaction_data_filename = f"user_study_data/prolific_batches/batch_interaction_data/{args.study_name}.json"
+    batch_summaries_filename = f"user_study_data/prolific_batches/batch_summaries/{args.study_name}.tsv"
     tmp_filename = "tmp.jsonl"
-    command = f"curl \"https://tejassrinivasan.pythonanywhere.com/read?password={PYTHONANYWHERE_KEY}&project=2step-trust-study-interventions/{args.study_id}\" > {tmp_filename}"
+    command = f"curl \"https://tejassrinivasan.pythonanywhere.com/read?password={PYTHONANYWHERE_KEY}&project=vlm-rationales-study/{args.study_id}\" > {tmp_filename}"
     os.system(command)
 
     submissions = get_submissions(args.study_id)
@@ -119,6 +119,14 @@ if __name__ == '__main__':
     all_interactions = []
     with jsonlines.open(tmp_filename) as reader:
         for obj in reader:
+            if "PROLIFIC_PID" in obj['url_data']:
+                obj['url_data']['prolific_id'] = obj['url_data']['PROLIFIC_PID']
+                obj['url_data']['study_id'] = obj['url_data']['STUDY_ID']
+                obj['url_data']['session_id'] = obj['url_data']['SESSION_ID']
+                del obj['url_data']['PROLIFIC_PID']
+                del obj['url_data']['STUDY_ID']
+                del obj['url_data']['SESSION_ID']
+
             user_id = obj['url_data']['prolific_id']
             try:
                 assert obj['question_i'] == len(uid2interactions[user_id])
@@ -147,17 +155,27 @@ if __name__ == '__main__':
             #pdb.set_trace()
             continue
         
-        balance = round(uid2interactions[uid][-1]['user_balance_post_interaction'], 2)
+        balance = round(uid2interactions[uid][-1]['balance']['new'], 2)
+
+        def performance_summary(interactions, type):
+            num_unsures = len([x for x in interactions if x['user_selections'][type] == 2])
+            num_correct = len([x for x in interactions if x['user_is_correct'][type] == 1])
+            num_incorrect = len([x for x in interactions if x['user_is_correct'][type] == 0])
+            return {
+                'num_unsures': num_unsures,
+                'num_correct': num_correct,
+                'num_incorrect': num_incorrect,
+            }
         interactions = uid2interactions[uid]
-        accuracy_answeronly = len([x for x in interactions if x['user_is_correct']['answeronly']]) / len(interactions)
-        accuracy_withexplanation = len([x for x in interactions if x['user_is_correct']['withexplanation']]) / len(interactions)
-        accuracy_withexplanationquality = len([x for x in interactions if x['user_is_correct']['withexplanationquality']]) / len(interactions)
+        answeronly_summary = performance_summary(interactions, 'answeronly')
+        withexplanation_summary = performance_summary(interactions, 'withexplanation')
+        withexplanationquality_summary = performance_summary(interactions, 'withexplanationquality')
         num_exits = sum([x['count_exited_page'] for x in interactions])
         interaction_summary = {
             'balance': balance,
-            'accuracy_answeronly': accuracy_answeronly,
-            'accuracy_withexplanation': accuracy_withexplanation,
-            'accuracy_withexplanationquality': accuracy_withexplanationquality,
+            'answeronly_summary': answeronly_summary,
+            'withexplanation_summary': withexplanation_summary,
+            'withexplanationquality_summary': withexplanationquality_summary,
             'num_exits': num_exits
         }
 
@@ -175,7 +193,7 @@ if __name__ == '__main__':
             print(f"UID: {uid} is {s['status'].lower()}.")
             display_interaction_summary(uid, interaction_summary)
             try:
-                assert len(interactions) == 30
+                assert len(interactions) == 10
             except:
                 print(f"Number of interactions is {len(interactions)}")
                 pdb.set_trace()
@@ -212,11 +230,11 @@ if __name__ == '__main__':
     #print(f"\n\nProlific ID{' '*25}\tBalance\tFalseAccepts\tFalseRejects\t# exits{' '*5}\t# of max bets\tAvg bet value")
     os.makedirs(os.path.dirname(batch_summaries_filename), exist_ok=True)
     f = open(batch_summaries_filename, 'w')
-    f.write(f"Prolific ID\tSession ID\tBalance\tAccAnswerOnly\tAccWithExpl\tAccWithExplQuality\t# exits\tStatus\n")
+    f.write(f"Prolific ID\tSession ID\tBalance\tPaidBalance\t# exits\tStatus\n")
     for o in output_data:
         s = output_data[o]['interaction_summary']
         if output_data[o]['status'] in ['APPROVED', 'REJECTED']:
-            f.write(f"{o}\t{output_data[o]['id']}\t${s['balance']:.2f}\t{s['accuracy_answeronly']:.4f}\t{s['accuracy_withexplanation']:.4f}\t{s['accuracy_withexplanationquality']:.4f}\t{s['num_exits']}\t{output_data[o]['status']}\n")
+            f.write(f"{o}\t{output_data[o]['id']}\t${s['balance']:.2f}\t${max(s['balance'], 0):.2f}\t{s['num_exits']}\t{output_data[o]['status']}\n")
     f.close()
 
     # Read the tsv file into pandas dataframe and print 
