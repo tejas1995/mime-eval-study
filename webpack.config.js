@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
    // const datasets = Array.from({ length: 20 }, (_, i) => `llava1.5_with_image_q20_i10_s0/${String(i).padStart(3, '0')}.json`);
 
    // return datasets.map(dataset => ({
-   return {
+   const baseConfig = {
       entry: './src/main.ts',
       devtool: 'inline-source-map',
       module: {
@@ -59,4 +59,16 @@ module.exports = (env, argv) => {
          hints: false,
       },
    };
+
+   const productConfig = {
+      ...baseConfig,
+      entry: './src/main_prod_metric.ts',
+      output: {
+         filename: 'web_prod_metric.js',
+         path: path.resolve(__dirname, 'web/prod_metric'),
+      }
+   };
+
+   // Return an array of configurations
+   return [baseConfig, productConfig];
 };
