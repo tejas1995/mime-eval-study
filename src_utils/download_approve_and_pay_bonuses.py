@@ -8,6 +8,8 @@ import pandas as pd
 import jsonlines, json
 from collections import defaultdict
 
+SAVE_DIR = "/home/shared/vlm_rationales_eval/user_studies_data/"
+
 def get_submissions(study_id):
     r = requests.get(
         f"https://api.prolific.co/api/v1/studies/{study_id}/submissions/",
@@ -105,8 +107,8 @@ if __name__ == '__main__':
     parser.add_argument('--study_name', type=str, required=True)
     args = parser.parse_args()
 
-    interaction_data_filename = f"user_study_data/prolific_batches/batch_interaction_data/{args.study_name}.json"
-    batch_summaries_filename = f"user_study_data/prolific_batches/batch_summaries/{args.study_name}.tsv"
+    interaction_data_filename = f"{SAVE_DIR}/prolific_batches/batch_interaction_data/{args.study_name}.json"
+    batch_summaries_filename = f"{SAVE_DIR}/prolific_batches/batch_summaries/{args.study_name}.tsv"
     tmp_filename = "tmp.jsonl"
     command = f"curl \"https://tejassrinivasan.pythonanywhere.com/read?password={PYTHONANYWHERE_KEY}&project=vlm-rationales-study/{args.study_id}\" > {tmp_filename}"
     os.system(command)

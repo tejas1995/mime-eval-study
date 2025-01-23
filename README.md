@@ -60,7 +60,7 @@ After the study is completed, you need to download the logs, approve the user st
 python src_utils/download_approve_and_pay_bonuses.py --study_id <STUDY_ID> --study_name <STUDY_NAME>
 ```
 
-The `STUDY_ID` is whatever ID is assigned by Prolific to the study. The `STUDY_NAME` is a shorthand name of the study, which is used to identify the study in the logs. A format I like to use for `STUDY_NAME` is `<QUEUE_NAME>_batch<BATCH_NUMBER>_<NUM_USERS>users`.
+The `STUDY_ID` is whatever ID is assigned by Prolific to the study. The `STUDY_NAME` is a shorthand name of the study, which is used to identify the study in the logs. A format I like to use for `STUDY_NAME` is `<QUEUE_NAME>/<QUEUE_NUMBER>_<NUM_USERS>users`.
 
 There may be some issues with this part of the code, we can debug those together later once you get to this part.
 
@@ -76,7 +76,7 @@ The main files you may need to edit are:
 
     If you are running the server locally, nothing actually gets logged, but the data that would have been logged is printed to the console. 
     
-    If you are running a study with the deployed project, the data will be logged to `https://tejassrinivasan.pythonanywhere.com/`. At the end of the study, when you run `src_utils/download_approve_and_pay_bonuses.py`, the data will be downloaded to `study_data/`.
+    If you are running a study with the deployed project, the data will be logged to `https://tejassrinivasan.pythonanywhere.com/`. At the end of the study, when you run `src_utils/download_approve_and_pay_bonuses.py`, the data will be downloaded to `/home/shared/vlm_rationales_eval/user_studies_data/`. You can then analyze the code by running the notebook `src_analysis/UserStudyAnalysis.ipynb` -- just set the `setting` variable to the `QUEUE_NAME`.
 
 ### Instructions for editing the code
 
