@@ -8,17 +8,18 @@ import pandas as pd
 import jsonlines, json
 from collections import defaultdict
 
-SAVE_DIR = "/home/shared/vlm_rationales_eval/user_studies_data/"
+SAVE_DIR = "/home/shared/vlm_rationales_eval/user_studies_data"
 
 def get_submissions(study_id):
-    r = requests.get(
+    out = requests.get(
         f"https://api.prolific.co/api/v1/studies/{study_id}/submissions/",
         params={"state": "AWAITING REVIEW"},
         headers={"Authorization": f"Token {PROLIFIC_API_KEY}"}
     )
-    if not r.ok:
+    if not out.ok:
+        pdb.set_trace()
         exit("Unable to complete an important request (fetching submissions).")
-    d = r.json()["results"]
+    d = out.json()["results"]
     return d
 
 def display_interaction_summary(uid, interaction_summary):
@@ -58,18 +59,19 @@ def reject_submission(submission_id, participant_id, message, rejection_category
     print(f'status: {d["status"]}, participant: {d["participant"]}')
 
 def approve_and_pay_bonuses(study_id, session_id, participant_id, bonus_payment):
-    r = requests.post(
+    out = requests.post(
         f"https://api.prolific.co/api/v1/submissions/{session_id}/transition/",
         headers={"Authorization": f"Token {PROLIFIC_API_KEY}"},
         json={
             "action": "APPROVE",
         }
     )
-    if not r.ok:
+    if not out.ok:
+        pdb.set_trace()
         exit(
             f"Failed approval of {session_id} of participant {participant_id}"
         )
-    d = r.json()
+    d = out.json()
     print(f'status: {d["status"]}, participant: {d["participant"]}')
 
     if float(bonus_payment) <= 0.0:
@@ -144,6 +146,7 @@ if __name__ == '__main__':
     output_data = {}
     for s in submissions:
         uid = s['participant_id']
+        #print(uid)
         if s['status'] == 'RETURNED':
             print(f"UID: {uid} was returned.")
             print("-"*100)
@@ -155,6 +158,8 @@ if __name__ == '__main__':
             print(f"Interaction data not found in PythonAnywhere logs for User {uid}.")
             print('-'*100)
             #pdb.set_trace()
+            continue
+        if len(uid2interactions[uid]) != 10:
             continue
         
         balance = round(uid2interactions[uid][-1]['balance']['new'], 2)
@@ -226,6 +231,7 @@ if __name__ == '__main__':
         #pdb.set_trace()
 
     # Create parent directory if it doesn't exist
+    print(interaction_data_filename)
     os.makedirs(os.path.dirname(interaction_data_filename), exist_ok=True)
     json.dump(output_data, open(interaction_data_filename, 'w'), indent=2)
 
