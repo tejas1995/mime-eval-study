@@ -7,12 +7,7 @@ import { paramsToObject } from "./utils"
 var data: any[] = []
 let question_i = -1
 let question: any = null
-let userselection_answeronly: number = -1
-let userselection_withexplanation: number = -1
-let userselection_withexplanationquality: number = -1
-let num_correct = 0
-let num_incorrect = 0
-let num_unsure = 0
+
 
 let balance = 0
 
@@ -25,83 +20,6 @@ function assert(condition, message) {
     }
 }
 
-function registerAnswerOnlyUserSelection(user_choice: number) {
-    userselection_answeronly = user_choice
-
-    $("#button_answeronly_usertrusts").attr("disabled", "true")
-    $("#button_answeronly_userdistrusts").attr("disabled", "true")
-    $("#button_answeronly_userunsure").attr("disabled", "true")
-    if (user_choice == 0) {
-        $("#button_answeronly_usertrusts").attr("activedecision", "true")
-    } else if (user_choice == 1) {
-        $("#button_answeronly_userdistrusts").attr("activedecision", "true")
-    } else if (user_choice == 2) {
-        $("#button_answeronly_userunsure").attr("activedecision", "true")
-    }
-    $("#ai_explanation_div").show()
-}
-// Event listener for the button click
-document.getElementById('button_answeronly_usertrusts')?.addEventListener('click', () => registerAnswerOnlyUserSelection(0));
-document.getElementById('button_answeronly_userdistrusts')?.addEventListener('click', () => registerAnswerOnlyUserSelection(1));
-document.getElementById('button_answeronly_userunsure')?.addEventListener('click', () => registerAnswerOnlyUserSelection(2));
-
-
-function registerWithExplanationUserSelection(user_choice: number) {
-    userselection_withexplanation = user_choice
-
-    $("#button_withexplanation_usertrusts").attr("disabled", "true")
-    $("#button_withexplanation_userdistrusts").attr("disabled", "true")
-    $("#button_withexplanation_userunsure").attr("disabled", "true")
-    if (user_choice == 0) {
-        $("#button_withexplanation_usertrusts").attr("activedecision", "true")
-    } else if (user_choice == 1) {
-        $("#button_withexplanation_userdistrusts").attr("activedecision", "true")
-    } else if (user_choice == 2) {
-        $("#button_withexplanation_userunsure").attr("activedecision", "true")
-    }
-    $("#ai_explanation_quality_div").show()
-}
-
-document.getElementById('button_withexplanation_usertrusts')?.addEventListener('click', () => registerWithExplanationUserSelection(0));
-document.getElementById('button_withexplanation_userdistrusts')?.addEventListener('click', () => registerWithExplanationUserSelection(1));
-document.getElementById('button_withexplanation_userunsure')?.addEventListener('click', () => registerWithExplanationUserSelection(2));
-  
-function registerWithExplanationQualityUserSelection(user_choice: number) {
-    userselection_withexplanationquality = user_choice
-
-    $("#button_withexplanationquality_usertrusts").attr("disabled", "true")
-    $("#button_withexplanationquality_userdistrusts").attr("disabled", "true")
-    $("#button_withexplanationquality_userunsure").attr("disabled", "true")
-    if (user_choice == 0) {
-        $("#button_withexplanationquality_usertrusts").attr("activedecision", "true")
-    } else if (user_choice == 1) {
-        $("#button_withexplanationquality_userdistrusts").attr("activedecision", "true")
-    } else if (user_choice == 2) {
-        $("#button_withexplanationquality_userunsure").attr("activedecision", "true")
-    }
-    $("#button_next").show()
-    $("#button_next").removeAttr("disabled")
-}
-
-document.getElementById('button_withexplanationquality_usertrusts')?.addEventListener('click', () => registerWithExplanationQualityUserSelection(0));
-document.getElementById('button_withexplanationquality_userdistrusts')?.addEventListener('click', () => registerWithExplanationQualityUserSelection(1));
-document.getElementById('button_withexplanationquality_userunsure')?.addEventListener('click', () => registerWithExplanationQualityUserSelection(2));
-
-
-function updateRewardInstructions() {
-    const rewardInstructions = document.getElementById('reward_instructions');
-
-    if (rewardInstructions) {
-        rewardInstructions.innerHTML = `
-            If your final decision is correct, you gain a reward of $${REWARD_CORRECT.toFixed(2)}. 
-            If your final decision is incorrect, you lose $${Math.abs(PENALTY_INCORRECT).toFixed(2)} from your reward. 
-            You will see your total reward at the end of the experiment. 
-            Your payment is $2.0 plus whatever you accumulate during this experiment.
-        `;
-        // If your final decision is correct, you gain a reward of $0.10. If your final decision is incorrect, you lose $0.10 from your reward.
-        // You will see your total reward at the end of the experiment. Your payment is $2.0 plus whatever you accumulate during this experiment.
-    }
-}
 
 function next_instructions(increment: number) {
     instruction_i += increment
@@ -111,14 +29,14 @@ function next_instructions(increment: number) {
     } else {
         $("#button_instructions_prev").removeAttr("disabled")
     }
-    if (instruction_i >= 5) {
+    if (instruction_i == 0) {
         $("#instructions_and_decorations").show()
         $("#button_instructions_next").val("Start study")
     } else {
         $("#instructions_and_decorations").hide()
         $("#button_instructions_next").val("Next")
     }
-    if (instruction_i == 6) {
+    if (instruction_i == 1) {
         $("#instructions_and_decorations").show()
         $("#main_box_instructions").hide()
         $("#main_box_experiment").show()
@@ -133,44 +51,40 @@ function next_instructions(increment: number) {
 $("#button_instructions_next").on("click", () => next_instructions(+1))
 $("#button_instructions_prev").on("click", () => next_instructions(-1))
 
-function utility_of_selection(selection: number) {
-    let utility: number = 0
-    if (selection == 2) {
-        utility = 0
-    } else {
-        let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
-        utility = (selection == correct_selection) ? 1 : -1
-    }
-    return utility
+// Add listener to ensure the video has been watched
+const videoElement = document.getElementById('mime_video');
+
+if (videoElement) {
+    // Add an event listener for the 'ended' event
+    videoElement.addEventListener('ended', () => {
+        console.log('The user has watched the full video.');
+        // You can add additional actions here, such as marking the video as watched
+        $("#watchvideo_instruction").hide()
+        $("#answer_box").show()
+    });
+} else {
+    console.error('Video element with ID "mime_video" not found.');
 }
+
+
+$('#answer_box').on('keyup', () => {
+    let user_prediction = String($('#user_prediction').val()).trim()
+    if (user_prediction != '') {
+        $("#button_next").show()
+    } else {
+        console.log('The text box is empty.');
+        $("#button_next").hide()
+    }
+});
 
 $("#button_next").on("click", () => {
 
     // Update the user balance
-    let old_balance = balance
-    update_balance()
-
     if (question_i != -1) {
         let logged_data = {
             "question_i": question_i,
-            "user_selections": {
-                "answeronly": userselection_answeronly,
-                "withexplanation": userselection_withexplanation,
-                "withexplanationquality": userselection_withexplanationquality
-            },
-            "user_is_correct": {
-                "answeronly": is_user_correct(userselection_answeronly),
-                "withexplanation": is_user_correct(userselection_withexplanation),
-                "withexplanationquality": is_user_correct(userselection_withexplanationquality)
-            },
-            "utility_of_explanation": utility_of_selection(userselection_withexplanation) - utility_of_selection(userselection_answeronly),
-            "utility_of_quality_metrics": utility_of_selection(userselection_withexplanationquality) - utility_of_selection(userselection_withexplanation),
-            "balance": {
-                "old": old_balance,
-                "new": balance
-            }
+            "user_answer": $("#user_prediction").val(),
         }
-
         logged_data['question'] = question
         logged_data['count_exited_page'] = count_exited_page
         log_data(logged_data)
@@ -181,35 +95,6 @@ $("#button_next").on("click", () => {
     next_question()
 });
 
-
-function is_user_correct(selection) {
-    if (selection != 2) {
-        let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
-        return selection == correct_selection ? 1 : 0
-    }
-    return -1
-}
-
-function update_balance() {
-    if (userselection_withexplanationquality != 2) {
-        let correct_selection = 1 - question["prediction_is_correct"] // 0 if AI is correct, 1 if incorrect
-        if (userselection_withexplanationquality == correct_selection) {
-            balance += REWARD_CORRECT;
-            num_correct += 1;
-        } else {
-            balance += PENALTY_INCORRECT;
-            num_incorrect += 1;
-        }
-    } else {
-        num_unsure += 1;
-    }
-}
-
-// To ensure balance is non-negative
-function finalize_balance() {
-    balance = Math.max(0, balance);
-    return balance;
-}
 
 let activeTimer: ReturnType<typeof setInterval> | null = null; // Timer interval
 
@@ -279,92 +164,7 @@ document.onvisibilitychange = () => {
     }
 };
 
-// First step: enforce a 5-second wait
-function setupFirstStep(explanationText) {
-    const firstStepDiv = document.getElementById('ai_answer_div');
-    const buttons = [
-        document.getElementById('button_answeronly_usertrusts'),
-        document.getElementById('button_answeronly_userdistrusts'),
-        document.getElementById('button_answeronly_userunsure')
-    ];
 
-    buttons.forEach(button => button?.removeEventListener('click', handleFirstStepClick)); // Remove old listeners
-    buttons.forEach(button => button?.addEventListener('click', handleFirstStepClick)); // Add new ones
-
-    function handleFirstStepClick() {
-        buttons.forEach(button => button?.removeEventListener('click', handleFirstStepClick)); // Cleanup
-        setupSecondStep(explanationText);
-    }
-
-    $("#ai_answer_div").show();
-    startTimer(5, firstStepDiv, buttons, null);
-    // $("#ai_answer_div").show(); // Show the first step
-    // startTimer(5, firstStepDiv, buttons, () => {
-    //     // Buttons are now enabled; user must click one to proceed
-    //     buttons.forEach(button => {
-    //         button?.addEventListener(
-    //             'click',
-    //             () => {
-    //                 setupSecondStep(explanationText); // Proceed to the second step after button click
-    //             },
-    //             { once: true } // Ensure the event listener is executed only once
-    //         );
-    //     });
-    // });
-}
-
-// Second step timer (dynamic based on reading time)
-function setupSecondStep(explanationText) {
-    const secondStepDiv = document.getElementById('ai_explanation_div');
-    const words = explanationText.split(' ').length;
-    const readingTime = Math.max(Math.ceil(3 + (words / 238) * 60), 5);
-
-    const buttons = [
-        document.getElementById('button_withexplanation_usertrusts'),
-        document.getElementById('button_withexplanation_userdistrusts'),
-        document.getElementById('button_withexplanation_userunsure')
-    ];
-
-    // Remove old event listeners
-    buttons.forEach(button => button?.removeEventListener('click', handleSecondStepClick));
-
-    // Add new event listeners
-    buttons.forEach(button => button?.addEventListener('click', handleSecondStepClick));
-
-    function handleSecondStepClick() {
-        // Cleanup: remove event listeners
-        buttons.forEach(button => button?.removeEventListener('click', handleSecondStepClick));
-        setupThirdStep(explanationText);
-    }
-
-    $("#ai_explanation_div").show(); // Show the second step
-    startTimer(readingTime, secondStepDiv, buttons, null); // Start timer
-}
-
-// Third step timer (5 seconds)
-function setupThirdStep(explanationText) {
-    const thirdStepDiv = document.getElementById('ai_explanation_quality_div');
-    const buttons = [
-        document.getElementById('button_withexplanationquality_usertrusts'),
-        document.getElementById('button_withexplanationquality_userdistrusts'),
-        document.getElementById('button_withexplanationquality_userunsure')
-    ];
-
-    // Remove old event listeners
-    buttons.forEach(button => button?.removeEventListener('click', handleThirdStepClick));
-
-    // Add new event listeners
-    buttons.forEach(button => button?.addEventListener('click', handleThirdStepClick));
-
-    function handleThirdStepClick() {
-        // Cleanup: remove event listeners
-        buttons.forEach(button => button?.removeEventListener('click', handleThirdStepClick));
-        $("#button_next").show(); // Enable the next question button
-    }
-
-    $("#ai_explanation_quality_div").show(); // Show the third step
-    startTimer(5, thirdStepDiv, buttons, null); // Start timer
-}
 
 function next_question() {
     // Reset timers and state
@@ -374,71 +174,26 @@ function next_question() {
     }
 
     // restore previous state of UI
-    $("#button_readytoanswer").removeAttr("activedecision")
-    $("#button_readytoanswer").removeAttr("disabled")
-    $("#button_readytoanswer").show()
 
-    $("#button_answeronly_usertrusts").removeAttr("activedecision")
-    $("#button_answeronly_usertrusts").removeAttr("disabled")
-    $("#button_answeronly_userdistrusts").removeAttr("activedecision")
-    $("#button_answeronly_userdistrusts").removeAttr("disabled")
-    $("#button_answeronly_userunsure").removeAttr("activedecision")
-    $("#button_answeronly_userunsure").removeAttr("disabled")
-
-    $("#button_withexplanation_usertrusts").removeAttr("activedecision")
-    $("#button_withexplanation_usertrusts").removeAttr("disabled")
-    $("#button_withexplanation_userdistrusts").removeAttr("activedecision")
-    $("#button_withexplanation_userdistrusts").removeAttr("disabled")
-    $("#button_withexplanation_userunsure").removeAttr("activedecision")
-    $("#button_withexplanation_userunsure").removeAttr("disabled")
-
-    $("#button_withexplanationquality_usertrusts").removeAttr("activedecision")
-    $("#button_withexplanationquality_usertrusts").removeAttr("disabled")
-    $("#button_withexplanationquality_userdistrusts").removeAttr("activedecision")
-    $("#button_withexplanationquality_userdistrusts").removeAttr("disabled")
-    $("#button_withexplanationquality_userunsure").removeAttr("activedecision")
-    $("#button_withexplanationquality_userunsure").removeAttr("disabled")
-
-    $("#ai_explanation_div").hide()
-    $("#ai_explanation_quality_div").hide()
-    
-
-    $("#button_next").hide()
-    $('#button_quit').hide()
     //$("#range_val").val(user_trust)
 
     question_i += 1
     if (question_i >= data.length) {
         $("#main_box_experiment").hide()
-        balance = finalize_balance()
-
-        let reward_text = `Your total reward is <b>$${balance.toFixed(2)} + $2</b>.`
-        reward_text += `<br>You answered a total of ${question_i} questions: ${num_correct} correct, ${num_incorrect} incorrect, ${num_unsure} unsure.`
-        if (MOCKMODE) {
-            $('#reward_box_mock').html(reward_text)
-            $('#reward_box_mock').show()
-            $("#main_box_end_mock").show()
-        } else {
-            $('#reward_box').html(reward_text)
-            $('#reward_box').show()
-            $("#main_box_end").show()
-        }
+        $('#reward_box').show()
+        $("#main_box_end").show()
         return
     }
 
     question = data[question_i]
+    console.log(question)
 
-    const questionText = question!["question"];
-    const updatedQuestionText = questionText.replace("Choices:", "<br><b>Choices:</b>");
-    $("#question_span").html(updatedQuestionText);
-
-    $("#ai_prediction_span").html(question!["predicted_answer"])
-    $("#ai_explanation_span").html(question!["generated_rationale"])
-
-    let visual_fidelity_conf = Math.round(question!["visual_fidelity"] * 100)
-    $("#explanation_fidelity_span").html(`${visual_fidelity_conf}%`)
-    let visual_contrastiveness_conf = Math.round(question!["contrastiveness"] * 100)
-    $("#explanation_contrastiveness_span").html(`${visual_contrastiveness_conf}%`)
+    $("#video").attr("src", question["video_url"])
+    $("#video").show()
+    $("#watchvideo_instruction").show()
+    $('#answer_box').hide()
+    $("#button_next").hide()
+    $('#button_quit').hide()
 
 
     // set bet value ratio
@@ -454,7 +209,6 @@ function next_question() {
     //time_question_start = Date.now()
     $("#progress").text(`Progress: ${question_i + 1} / ${data.length}`)
 
-    setupFirstStep(question["generated_rationale"]);
 }
 
 
@@ -514,7 +268,6 @@ load_data().catch((_error) => {
     }
     // next_question()
     next_instructions(0)
-    updateRewardInstructions();
     $("#main_box_instructions").show()
     $("#instructions_and_decorations").hide()
 })

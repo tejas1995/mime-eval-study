@@ -60,15 +60,6 @@ module.exports = (env, argv) => {
       },
    };
 
-   const productConfig = {
-      ...baseConfig,
-      entry: './src/main_prod_metric.ts',
-      output: {
-         filename: 'web_prod_metric.js',
-         path: path.resolve(__dirname, 'web/prod_metric'),
-      }
-   };
-
    // Return an array of configurations
-   return [baseConfig, productConfig];
+   return baseConfig;
 };
