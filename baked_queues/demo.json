@@ -1,0 +1,12 @@
+[
+    {
+        "video_url": "https://mime-understanding.s3.amazonaws.com/fishing_1char_1env.mp4",
+        "video_id": "fishing_1char_1env",
+        "mime_label": "fishing"
+    },
+    {
+        "video_url": "https://mime-understanding.s3.amazonaws.com/soccer_shot_0char_1env.mkv",
+        "video_id": "soccer_shot_0char_1env",
+        "mime_label": "kicking"
+    }
+]

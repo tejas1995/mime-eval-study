@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="public">
+    <title>AI Confidence</title>
+    <link rel="shortcut icon" href="#" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto&display=swap'>
+    <link rel="stylesheet" href="style.css?r=4">
+</head>
+
+<body style='text-align: center; margin-top: 30px; margin-bottom: 20px;'>
+    <h2 style="margin-left: auto; margin-right: auto;">What am I Miming?</h2>
+
+    <div style="text-align: left; width: 800px; margin-left: auto; margin-right: auto; margin-top: 30px">
+
+        <div id="instructions_and_decorations">
+            <div style="margin-top: 30px;  text-align: justify;">
+                <ul>
+                    <li style="margin: 10px 0;">In this experiment, you will be shown a video, and you must determine the action that is being mimed by the person in the video.</li>
+                    <li style="margin: 10px 0;">Type the action that you think is being mimed in the text box.</li>
+                </ul>
+
+            </div>
+
+            <br>
+            <div style="text-align: right; height: 20px; margin-left: -30px">
+                <div id="progress" style="width: 150px; float: left;">(-/-)</div>
+                <!--<div id="balance" style="width: 200px; float: right;">Balance: $0+$1.0</div>-->
+            </div>
+        </div>
+
+        
+        <!-- <div class="main_box" id="main_box_end" style="display: none">
+            Thank you for participation in our study.
+            <div id="reward_box" style="display: none">
+                Your total reward is $0.00 (0 questions answered).
+            </div>
+            Please navigate <a href="https://app.prolific.com/submissions/complete?cc=C18F0V8M"
+                style="color: black; font-weight: bold;">to Prolific</a> or with the code <b>C18F0V8M</b>.
+        </div> -->
+
+        <div class="main_box" id="main_box_end_mock" style="display: none">
+            Thank you for testing out our study.
+            <div id="reward_box_mock" style="display: none">
+                Your total reward is $0.00 (0 questions answered).
+            </div>
+            Please navigate <a href="https://app.prolific.com/submissions/complete?cc=C3HL048N" style="color: black; font-weight: bold;">to Prolific</a> or enter the completion code <b>C3HL048N</b> on Prolific to register your submission; otherwise, we will be unable to process your reward.
+            After entering the completion code, you can safely close this tab.
+        </div>
+
+        <div class="main_box" id="main_box_instructions" style="display: none">
+            <input id="button_instructions_prev" type="button" value="Previous">
+            <input id="button_instructions_next" type="button" value="Next" style="margin-bottom: 10px">
+
+            <div id="instructions_0">Welcome to our user study. In this experiment, you will be shown an image/video, and must determine the action that is being mimed in the video.
+            </div>
+        </div>
+
+        <div class="main_box" id="main_box_experiment" style="display: none">
+            <div id="video_box" align="center">
+                <video width="640" height="360" controls id="mime_video">
+                    <source src="https://mime-understanding.s3.amazonaws.com/fishing_1char_1env.mp4" type="video/mp4" id="video">
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+            <p id="watchvideo_instruction" style="font-size: 1.17em;">Please watch the video. You will be able to type in your answer after the video has ended.</p>
+            <div id="answer_box">
+                <p style="font-size: 1.17em;">What action is being mimed by the person here? Answer in 1-2 words.</p>
+                <input type="text" id="user_prediction" name="user_prediction" style="width: 300px; height: 30px; font-size: 1.17em; text-align: left;">
+            </div>
+            <br><br>
+
+            <!-- <input id="button_place_bet" type="button" class="button-neutral" value="See the result"> -->
+            <input id="button_next" type="button" class="button-neutral" value="Next question">
+            <input id="button_quit" type="button" class="button-neutral" value="End study">
+        </div>
+        <br>
+        <!-- Research project by Tejas Srinivasan at the University of Southern California. -->
+
+    </div>
+    <script id="nocachescript"></script>
+    <script>
+        var randomNum = String((Math.floor(Math.random() * 10e10)));
+        document.getElementById('nocachescript').src = "web.js?t=" + randomNum;
+    </script>
+    <script type="module" src="./globals.js" defer></script>
+</body>
+
+</html>
