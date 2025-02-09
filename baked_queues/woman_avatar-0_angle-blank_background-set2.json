@@ -1,0 +1,1088 @@
+[
+    {
+        "sample_id": "66fa9bf8",
+        "label": [
+            "weighted back squat",
+            "weightlifting"
+        ],
+        "distractors": [
+            "pulling",
+            "basketball shot",
+            "dragging"
+        ],
+        "avatar": "woman",
+        "action": "WeightedSquat002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_WeightedSquat002_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "weightlifting",
+        "options": [
+            "dragging",
+            "pulling",
+            "basketball shot",
+            "weightlifting"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "b1131ab6",
+        "label": [
+            "clean and jerk",
+            "weightlifting"
+        ],
+        "distractors": [
+            "drinking out of a cup",
+            "basketball layup",
+            "opening door"
+        ],
+        "avatar": "woman",
+        "action": "Weightlifting001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Weightlifting001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "clean and jerk",
+        "options": [
+            "basketball layup",
+            "clean and jerk",
+            "drinking out of a cup",
+            "opening door"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "f81c1137",
+        "label": [
+            "javelin throw"
+        ],
+        "distractors": [
+            "arm curls",
+            "back stroke swimming",
+            "watching tv"
+        ],
+        "avatar": "woman",
+        "action": "Javelin001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Javelin001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "javelin throw",
+        "options": [
+            "watching tv",
+            "arm curls",
+            "back stroke swimming",
+            "javelin throw"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "8fad0008",
+        "label": [
+            "tennis serve"
+        ],
+        "distractors": [
+            "basketball shot",
+            "watching tv",
+            "boxing uppercut"
+        ],
+        "avatar": "woman",
+        "action": "TennisServe02",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_TennisServe02_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "tennis serve",
+        "options": [
+            "boxing uppercut",
+            "watching tv",
+            "basketball shot",
+            "tennis serve"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "1ce898e9",
+        "label": [
+            "fencing"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "volleyball serve",
+            "weighted back squat"
+        ],
+        "avatar": "woman",
+        "action": "Fencing001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Fencing001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "fencing",
+        "options": [
+            "volleyball serve",
+            "weighted back squat",
+            "back stroke swimming",
+            "fencing"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "5a247d2d",
+        "label": [
+            "basketball shot"
+        ],
+        "distractors": [
+            "throwing dart",
+            "alternating single arm curls",
+            "volleyball serve"
+        ],
+        "avatar": "woman",
+        "action": "Basketball001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Basketball001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "basketball shot",
+        "options": [
+            "alternating single arm curls",
+            "throwing dart",
+            "volleyball serve",
+            "basketball shot"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "9554e400",
+        "label": [
+            "checking phone",
+            "sending text",
+            "using phone"
+        ],
+        "distractors": [
+            "playing drums",
+            "soccer shot",
+            "tennis serve"
+        ],
+        "avatar": "woman",
+        "action": "CheckingPhone002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_CheckingPhone002_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "checking phone",
+        "options": [
+            "tennis serve",
+            "checking phone",
+            "soccer shot",
+            "playing drums"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "cb8c52c9",
+        "label": [
+            "playing violin"
+        ],
+        "distractors": [
+            "controlling remote",
+            "dragging",
+            "shooting arrow"
+        ],
+        "avatar": "woman",
+        "action": "Violin002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Violin002_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "playing violin",
+        "options": [
+            "shooting arrow",
+            "playing violin",
+            "dragging",
+            "controlling remote"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "9cd6aae9",
+        "label": [
+            "pulling",
+            "dragging"
+        ],
+        "distractors": [
+            "butterfly stroke swimming",
+            "golf put",
+            "basketball layup"
+        ],
+        "avatar": "woman",
+        "action": "Pulling001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Pulling001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "pulling",
+        "options": [
+            "butterfly stroke swimming",
+            "basketball layup",
+            "pulling",
+            "golf put"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "da8d2573",
+        "label": [
+            "shooting rifle"
+        ],
+        "distractors": [
+            "playing harp",
+            "knocking on door",
+            "driving"
+        ],
+        "avatar": "woman",
+        "action": "ShootingARifle001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_ShootingARifle001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting rifle",
+        "options": [
+            "knocking on door",
+            "driving",
+            "shooting rifle",
+            "playing harp"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "4d21e939",
+        "label": [
+            "deadlift"
+        ],
+        "distractors": [
+            "bowling",
+            "taking photo",
+            "opening door"
+        ],
+        "avatar": "woman",
+        "action": "DeadLift001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_DeadLift001_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "deadlift",
+        "options": [
+            "bowling",
+            "opening door",
+            "taking photo",
+            "deadlift"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "8c9252ea",
+        "label": [
+            "opening door"
+        ],
+        "distractors": [
+            "checking watch",
+            "basketball floater",
+            "fencing"
+        ],
+        "avatar": "woman",
+        "action": "OpeningADoor001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_OpeningADoor001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "opening door",
+        "options": [
+            "basketball floater",
+            "fencing",
+            "checking watch",
+            "opening door"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "44244d09",
+        "label": [
+            "checking watch"
+        ],
+        "distractors": [
+            "shooting handgun",
+            "typing on keyboard",
+            "tennis swing"
+        ],
+        "avatar": "woman",
+        "action": "CheckingWatch001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_CheckingWatch001_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "checking watch",
+        "options": [
+            "typing on keyboard",
+            "shooting handgun",
+            "tennis swing",
+            "checking watch"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "cee1785a",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "taking photo",
+            "soccer shot",
+            "checking phone"
+        ],
+        "avatar": "woman",
+        "action": "Pushing003",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Pushing003_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "pushing",
+        "options": [
+            "pushing",
+            "checking phone",
+            "soccer shot",
+            "taking photo"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "75de087b",
+        "label": [
+            "playing drums"
+        ],
+        "distractors": [
+            "taking photo",
+            "shooting arrow",
+            "watching tv"
+        ],
+        "avatar": "woman",
+        "action": "PlayingDrums001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_PlayingDrums001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing drums",
+        "options": [
+            "watching tv",
+            "shooting arrow",
+            "taking photo",
+            "playing drums"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "333af6c2",
+        "label": [
+            "opening door"
+        ],
+        "distractors": [
+            "playing piano",
+            "weighted back squat",
+            "checking watch"
+        ],
+        "avatar": "woman",
+        "action": "OpeningADoor03",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_OpeningADoor03_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "opening door",
+        "options": [
+            "weighted back squat",
+            "checking watch",
+            "playing piano",
+            "opening door"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "5b16dc0b",
+        "label": [
+            "checking watch"
+        ],
+        "distractors": [
+            "playing harp",
+            "playing acoustic guitar",
+            "volleyball serve"
+        ],
+        "avatar": "woman",
+        "action": "CheckingWatch01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_CheckingWatch01_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "checking watch",
+        "options": [
+            "volleyball serve",
+            "checking watch",
+            "playing harp",
+            "playing acoustic guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "475a8755",
+        "label": [
+            "shot put"
+        ],
+        "distractors": [
+            "sending text",
+            "playing drums",
+            "typing on keyboard"
+        ],
+        "avatar": "woman",
+        "action": "ShotPut01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_ShotPut01_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shot put",
+        "options": [
+            "shot put",
+            "playing drums",
+            "sending text",
+            "typing on keyboard"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "e86da44d",
+        "label": [
+            "double arm curls",
+            "arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "typing on keyboard",
+            "controlling remote",
+            "receiving volleyball"
+        ],
+        "avatar": "woman",
+        "action": "ArmCurls01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_ArmCurls01_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "weightlifting",
+        "options": [
+            "receiving volleyball",
+            "controlling remote",
+            "typing on keyboard",
+            "weightlifting"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "0d58ff55",
+        "label": [
+            "playing piano"
+        ],
+        "distractors": [
+            "knocking on door",
+            "drinking out of a cup",
+            "backhand tennis swing"
+        ],
+        "avatar": "woman",
+        "action": "Piano002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Piano002_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing piano",
+        "options": [
+            "drinking out of a cup",
+            "backhand tennis swing",
+            "knocking on door",
+            "playing piano"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "3c41b87e",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "checking phone",
+            "playing piano",
+            "baseball pitch"
+        ],
+        "avatar": "woman",
+        "action": "Pushing001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Pushing001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "pushing",
+        "options": [
+            "pushing",
+            "playing piano",
+            "baseball pitch",
+            "checking phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "2a05f63e",
+        "label": [
+            "shooting handgun"
+        ],
+        "distractors": [
+            "checking watch",
+            "fencing",
+            "knocking on door"
+        ],
+        "avatar": "woman",
+        "action": "ShootingAHandgun001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_ShootingAHandgun001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting handgun",
+        "options": [
+            "shooting handgun",
+            "knocking on door",
+            "checking watch",
+            "fencing"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "6023d2fc",
+        "label": [
+            "deadlift"
+        ],
+        "distractors": [
+            "sending text",
+            "shooting handgun",
+            "basketball floater"
+        ],
+        "avatar": "woman",
+        "action": "Deadlift01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Deadlift01_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "deadlift",
+        "options": [
+            "sending text",
+            "basketball floater",
+            "shooting handgun",
+            "deadlift"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "5e9a3438",
+        "label": [
+            "golf put"
+        ],
+        "distractors": [
+            "watching tv",
+            "kicking",
+            "boxing uppercut"
+        ],
+        "avatar": "woman",
+        "action": "GolfPutting001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_GolfPutting001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "golf put",
+        "options": [
+            "kicking",
+            "watching tv",
+            "golf put",
+            "boxing uppercut"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "519d44a4",
+        "label": [
+            "back stroke swimming"
+        ],
+        "distractors": [
+            "shooting rifle",
+            "throwing dart",
+            "drinking out of a cup"
+        ],
+        "avatar": "woman",
+        "action": "Swimming06",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Swimming06_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "back stroke swimming",
+        "options": [
+            "back stroke swimming",
+            "throwing dart",
+            "shooting rifle",
+            "drinking out of a cup"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "180e4d86",
+        "label": [
+            "boxing uppercut"
+        ],
+        "distractors": [
+            "taking photo",
+            "soccer shot",
+            "tugging"
+        ],
+        "avatar": "woman",
+        "action": "Boxing03",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Boxing03_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "boxing uppercut",
+        "options": [
+            "boxing uppercut",
+            "tugging",
+            "taking photo",
+            "soccer shot"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "77530344",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "shooting arrow",
+            "baseball pitch",
+            "weighted back squat"
+        ],
+        "avatar": "woman",
+        "action": "Driving002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Driving002_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "driving",
+        "options": [
+            "weighted back squat",
+            "shooting arrow",
+            "driving",
+            "baseball pitch"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "c525a377",
+        "label": [
+            "playing electric guitar"
+        ],
+        "distractors": [
+            "throwing dart",
+            "opening door",
+            "weighted back squat"
+        ],
+        "avatar": "woman",
+        "action": "PlayingAGuitar004",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_PlayingAGuitar004_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing electric guitar",
+        "options": [
+            "throwing dart",
+            "opening door",
+            "weighted back squat",
+            "playing electric guitar"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "8f11fce9",
+        "label": [
+            "throwing dart"
+        ],
+        "distractors": [
+            "fencing",
+            "playing electric guitar",
+            "pulling"
+        ],
+        "avatar": "woman",
+        "action": "Darts001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Darts001_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "throwing dart",
+        "options": [
+            "pulling",
+            "fencing",
+            "playing electric guitar",
+            "throwing dart"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "e03d8f59",
+        "label": [
+            "shooting arrow"
+        ],
+        "distractors": [
+            "butterfly stroke swimming",
+            "basketball layup",
+            "basketball floater"
+        ],
+        "avatar": "woman",
+        "action": "Archery01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Archery01_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting arrow",
+        "options": [
+            "basketball floater",
+            "butterfly stroke swimming",
+            "basketball layup",
+            "shooting arrow"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "0c1b796c",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "weightlifting",
+            "basketball floater",
+            "volleyball serve"
+        ],
+        "avatar": "woman",
+        "action": "Pushing02",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Pushing02_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "pushing",
+        "options": [
+            "pushing",
+            "basketball floater",
+            "weightlifting",
+            "volleyball serve"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "05e7f082",
+        "label": [
+            "alternating single arm curls",
+            "arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "volleyball serve",
+            "shooting arrow",
+            "bowling"
+        ],
+        "avatar": "woman",
+        "action": "ArmCurls001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_ArmCurls001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "weightlifting",
+        "options": [
+            "bowling",
+            "shooting arrow",
+            "volleyball serve",
+            "weightlifting"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "463f69fa",
+        "label": [
+            "playing guitar"
+        ],
+        "distractors": [
+            "weighted back squat",
+            "tennis serve",
+            "sending text"
+        ],
+        "avatar": "woman",
+        "action": "PlayingGuitar03",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_PlayingGuitar03_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing guitar",
+        "options": [
+            "weighted back squat",
+            "sending text",
+            "tennis serve",
+            "playing guitar"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "e3c6c01a",
+        "label": [
+            "shot put"
+        ],
+        "distractors": [
+            "dragging",
+            "playing piano",
+            "deadlift"
+        ],
+        "avatar": "woman",
+        "action": "ShotPut001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_ShotPut001_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shot put",
+        "options": [
+            "dragging",
+            "playing piano",
+            "shot put",
+            "deadlift"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "25c8aa90",
+        "label": [
+            "golf swing"
+        ],
+        "distractors": [
+            "receiving volleyball",
+            "knocking on door",
+            "fencing"
+        ],
+        "avatar": "woman",
+        "action": "GolfSwing001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_GolfSwing001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "golf swing",
+        "options": [
+            "fencing",
+            "receiving volleyball",
+            "golf swing",
+            "knocking on door"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "f803c84a",
+        "label": [
+            "playing harp"
+        ],
+        "distractors": [
+            "shooting handgun",
+            "shooting arrow",
+            "basketball shot"
+        ],
+        "avatar": "woman",
+        "action": "PlayingHarp001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_PlayingHarp001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing harp",
+        "options": [
+            "shooting handgun",
+            "playing harp",
+            "shooting arrow",
+            "basketball shot"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "0a0842dc",
+        "label": [
+            "shooting handgun"
+        ],
+        "distractors": [
+            "playing electric guitar",
+            "pushing",
+            "weightlifting"
+        ],
+        "avatar": "woman",
+        "action": "ShootingHandgun04",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_ShootingHandgun04_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting handgun",
+        "options": [
+            "pushing",
+            "playing electric guitar",
+            "weightlifting",
+            "shooting handgun"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "ca6c5d56",
+        "label": [
+            "butterfly stroke swimming"
+        ],
+        "distractors": [
+            "volleyball serve",
+            "shooting rifle",
+            "weightlifting"
+        ],
+        "avatar": "woman",
+        "action": "Swimming03",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_Swimming03_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "butterfly stroke swimming",
+        "options": [
+            "weightlifting",
+            "butterfly stroke swimming",
+            "volleyball serve",
+            "shooting rifle"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "15be6740",
+        "label": [
+            "baseball pitch"
+        ],
+        "distractors": [
+            "weightlifting",
+            "golf put",
+            "kicking"
+        ],
+        "avatar": "woman",
+        "action": "BaseballPitch002",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_BaseballPitch002_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "baseball pitch",
+        "options": [
+            "baseball pitch",
+            "kicking",
+            "golf put",
+            "weightlifting"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "a2c9cdec",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "golf put",
+            "playing acoustic guitar",
+            "weighted back squat"
+        ],
+        "avatar": "woman",
+        "action": "Driving003",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Driving003_angle0_blank.mp4",
+        "split": "val",
+        "mcq_label": "driving",
+        "options": [
+            "weighted back squat",
+            "driving",
+            "playing acoustic guitar",
+            "golf put"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "d27121d7",
+        "label": [
+            "gaming",
+            "using phone"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "tennis serve",
+            "playing electric guitar"
+        ],
+        "avatar": "woman",
+        "action": "consolegaming01",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_consolegaming01_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "gaming",
+        "options": [
+            "gaming",
+            "tennis serve",
+            "playing electric guitar",
+            "back stroke swimming"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "ff4ce0d1",
+        "label": [
+            "basketball layup",
+            "basketball floater"
+        ],
+        "distractors": [
+            "backhand tennis swing",
+            "shooting arrow",
+            "playing acoustic guitar"
+        ],
+        "avatar": "woman",
+        "action": "BasketballLayup02",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Natali_BasketballLayup02_angle0_blank.mp4",
+        "split": "train",
+        "mcq_label": "basketball floater",
+        "options": [
+            "playing acoustic guitar",
+            "backhand tennis swing",
+            "basketball floater",
+            "shooting arrow"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "8b75d02c",
+        "label": [
+            "putting on seatbelt"
+        ],
+        "distractors": [
+            "climbing",
+            "baseball swing",
+            "pulling"
+        ],
+        "avatar": "woman",
+        "action": "Seatbelt001",
+        "angle": "0",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/woman_Justin_Seatbelt001_angle0_blank.mp4",
+        "split": "test",
+        "mcq_label": "putting on seatbelt",
+        "options": [
+            "climbing",
+            "putting on seatbelt",
+            "pulling",
+            "baseball swing"
+        ],
+        "label_idx": 1
+    }
+]

@@ -1,0 +1,1086 @@
+[
+    {
+        "sample_id": "9da7afdb",
+        "label": [
+            "tennis serve"
+        ],
+        "distractors": [
+            "basketball shot",
+            "climbing",
+            "alternating single arm curls"
+        ],
+        "avatar": "man",
+        "action": "TennisServe001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_TennisServe001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "tennis serve",
+        "options": [
+            "alternating single arm curls",
+            "basketball shot",
+            "climbing",
+            "tennis serve"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "0bc59813",
+        "label": [
+            "shooting arrow"
+        ],
+        "distractors": [
+            "playing drums",
+            "playing guitar",
+            "arm curls"
+        ],
+        "avatar": "man",
+        "action": "Archery001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Archery001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting arrow",
+        "options": [
+            "arm curls",
+            "playing drums",
+            "playing guitar",
+            "shooting arrow"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "f062017b",
+        "label": [
+            "gaming",
+            "using phone"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "tennis serve",
+            "playing electric guitar"
+        ],
+        "avatar": "man",
+        "action": "consolegaming01",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_consolegaming01_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "gaming",
+        "options": [
+            "tennis serve",
+            "back stroke swimming",
+            "gaming",
+            "playing electric guitar"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "2a2bfde0",
+        "label": [
+            "playing acoustic guitar"
+        ],
+        "distractors": [
+            "fishing",
+            "knocking on door",
+            "bowling"
+        ],
+        "avatar": "man",
+        "action": "PlayingAGuitar002",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_PlayingAGuitar002_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing acoustic guitar",
+        "options": [
+            "playing acoustic guitar",
+            "bowling",
+            "fishing",
+            "knocking on door"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "c9eb3f22",
+        "label": [
+            "javelin throw"
+        ],
+        "distractors": [
+            "arm curls",
+            "back stroke swimming",
+            "watching tv"
+        ],
+        "avatar": "man",
+        "action": "Javelin001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Javelin001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "javelin throw",
+        "options": [
+            "back stroke swimming",
+            "javelin throw",
+            "arm curls",
+            "watching tv"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "1421f11f",
+        "label": [
+            "opening door"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "bowling",
+            "receiving volleyball"
+        ],
+        "avatar": "man",
+        "action": "OpeningADoor002",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_OpeningADoor002_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "opening door",
+        "options": [
+            "receiving volleyball",
+            "back stroke swimming",
+            "bowling",
+            "opening door"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "89b3e707",
+        "label": [
+            "playing guitar"
+        ],
+        "distractors": [
+            "fencing",
+            "javelin throw",
+            "dragging"
+        ],
+        "avatar": "man",
+        "action": "PlayingGuitar02",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_PlayingGuitar02_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing guitar",
+        "options": [
+            "javelin throw",
+            "fencing",
+            "dragging",
+            "playing guitar"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "b70d9573",
+        "label": [
+            "breast stroke swimming"
+        ],
+        "distractors": [
+            "arm curls",
+            "double arm curls",
+            "deadlift"
+        ],
+        "avatar": "man",
+        "action": "Swimming002",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Swimming002_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "breast stroke swimming",
+        "options": [
+            "double arm curls",
+            "deadlift",
+            "arm curls",
+            "breast stroke swimming"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "b02e30c7",
+        "label": [
+            "baseball pitch"
+        ],
+        "distractors": [
+            "checking watch",
+            "front stroke swimming",
+            "tugging"
+        ],
+        "avatar": "man",
+        "action": "BaseballPitch02",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_BaseballPitch02_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "baseball pitch",
+        "options": [
+            "tugging",
+            "checking watch",
+            "baseball pitch",
+            "front stroke swimming"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "79f4aba7",
+        "label": [
+            "putting on seatbelt"
+        ],
+        "distractors": [
+            "climbing",
+            "baseball swing",
+            "pulling"
+        ],
+        "avatar": "man",
+        "action": "Seatbelt001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Seatbelt001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "putting on seatbelt",
+        "options": [
+            "pulling",
+            "putting on seatbelt",
+            "climbing",
+            "baseball swing"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "fe92ce3a",
+        "label": [
+            "baseball swing"
+        ],
+        "distractors": [
+            "controlling remote",
+            "playing violin",
+            "drinking out of a cup"
+        ],
+        "avatar": "man",
+        "action": "Baseball004",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Baseball004_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "baseball swing",
+        "options": [
+            "playing violin",
+            "drinking out of a cup",
+            "baseball swing",
+            "controlling remote"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "d39709a8",
+        "label": [
+            "shot put"
+        ],
+        "distractors": [
+            "dragging",
+            "playing piano",
+            "deadlift"
+        ],
+        "avatar": "man",
+        "action": "ShotPut001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_ShotPut001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "shot put",
+        "options": [
+            "playing piano",
+            "shot put",
+            "deadlift",
+            "dragging"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "bcddc32b",
+        "label": [
+            "soccer shot"
+        ],
+        "distractors": [
+            "throwing dart",
+            "weightlifting",
+            "pulling"
+        ],
+        "avatar": "man",
+        "action": "Soccer003",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Soccer003_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "soccer shot",
+        "options": [
+            "weightlifting",
+            "throwing dart",
+            "pulling",
+            "soccer shot"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "ff176b40",
+        "label": [
+            "butterfly stroke swimming"
+        ],
+        "distractors": [
+            "volleyball serve",
+            "shooting rifle",
+            "weightlifting"
+        ],
+        "avatar": "man",
+        "action": "Swimming03",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Swimming03_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "butterfly stroke swimming",
+        "options": [
+            "weightlifting",
+            "butterfly stroke swimming",
+            "shooting rifle",
+            "volleyball serve"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "89722b7e",
+        "label": [
+            "typing on keyboard"
+        ],
+        "distractors": [
+            "playing violin",
+            "kicking",
+            "throwing dart"
+        ],
+        "avatar": "man",
+        "action": "Keyboard001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Keyboard001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "typing on keyboard",
+        "options": [
+            "kicking",
+            "playing violin",
+            "throwing dart",
+            "typing on keyboard"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "a78120ec",
+        "label": [
+            "boxing uppercut"
+        ],
+        "distractors": [
+            "taking photo",
+            "soccer shot",
+            "tugging"
+        ],
+        "avatar": "man",
+        "action": "Boxing03",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Boxing03_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "boxing uppercut",
+        "options": [
+            "taking photo",
+            "boxing uppercut",
+            "soccer shot",
+            "tugging"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "3dead1e5",
+        "label": [
+            "front stroke swimming"
+        ],
+        "distractors": [
+            "bowling",
+            "deadlift",
+            "receiving volleyball"
+        ],
+        "avatar": "man",
+        "action": "Swimming001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Swimming001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "front stroke swimming",
+        "options": [
+            "deadlift",
+            "bowling",
+            "receiving volleyball",
+            "front stroke swimming"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "befe4a6c",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "golf put",
+            "playing acoustic guitar",
+            "weighted back squat"
+        ],
+        "avatar": "man",
+        "action": "Driving003",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Driving003_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "driving",
+        "options": [
+            "playing acoustic guitar",
+            "golf put",
+            "weighted back squat",
+            "driving"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "9ccdeec4",
+        "label": [
+            "volleyball serve"
+        ],
+        "distractors": [
+            "writing",
+            "breast stroke swimming",
+            "baseball pitch"
+        ],
+        "avatar": "man",
+        "action": "VolleyballServe",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_VolleyballServe_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "volleyball serve",
+        "options": [
+            "baseball pitch",
+            "writing",
+            "volleyball serve",
+            "breast stroke swimming"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "dc9d4c0e",
+        "label": [
+            "bowling"
+        ],
+        "distractors": [
+            "deadlift",
+            "opening door",
+            "shooting arrow"
+        ],
+        "avatar": "man",
+        "action": "Bowling003",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Bowling003_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "bowling",
+        "options": [
+            "shooting arrow",
+            "opening door",
+            "bowling",
+            "deadlift"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "91a63fd8",
+        "label": [
+            "climbing"
+        ],
+        "distractors": [
+            "writing",
+            "shooting arrow",
+            "watching tv"
+        ],
+        "avatar": "man",
+        "action": "Climbing001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Climbing001_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "climbing",
+        "options": [
+            "shooting arrow",
+            "climbing",
+            "writing",
+            "watching tv"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "80cf5d7a",
+        "label": [
+            "tennis swing"
+        ],
+        "distractors": [
+            "climbing",
+            "playing guitar",
+            "shooting handgun"
+        ],
+        "avatar": "man",
+        "action": "TennisSwing001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_TennisSwing001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "tennis swing",
+        "options": [
+            "tennis swing",
+            "climbing",
+            "playing guitar",
+            "shooting handgun"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "1029ac2a",
+        "label": [
+            "basketball shot"
+        ],
+        "distractors": [
+            "throwing dart",
+            "alternating single arm curls",
+            "volleyball serve"
+        ],
+        "avatar": "man",
+        "action": "Basketball001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Basketball001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "basketball shot",
+        "options": [
+            "throwing dart",
+            "alternating single arm curls",
+            "volleyball serve",
+            "basketball shot"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "4757c4fd",
+        "label": [
+            "double arm curls",
+            "arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "typing on keyboard",
+            "controlling remote",
+            "receiving volleyball"
+        ],
+        "avatar": "man",
+        "action": "ArmCurls01",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_ArmCurls01_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "double arm curls",
+        "options": [
+            "double arm curls",
+            "controlling remote",
+            "typing on keyboard",
+            "receiving volleyball"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "f735a9a0",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "pushing",
+            "shooting handgun",
+            "basketball floater"
+        ],
+        "avatar": "man",
+        "action": "DrivingSittingDown03",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_DrivingSittingDown03_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "driving",
+        "options": [
+            "shooting handgun",
+            "basketball floater",
+            "driving",
+            "pushing"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "91893085",
+        "label": [
+            "playing drums"
+        ],
+        "distractors": [
+            "weighted back squat",
+            "arm curls",
+            "breast stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "PlayingDrums03",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_PlayingDrums03_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing drums",
+        "options": [
+            "playing drums",
+            "breast stroke swimming",
+            "arm curls",
+            "weighted back squat"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "b622b4c1",
+        "label": [
+            "clean and jerk",
+            "weightlifting"
+        ],
+        "distractors": [
+            "drinking out of a cup",
+            "basketball layup",
+            "opening door"
+        ],
+        "avatar": "man",
+        "action": "Weightlifting001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Weightlifting001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "clean and jerk",
+        "options": [
+            "drinking out of a cup",
+            "opening door",
+            "clean and jerk",
+            "basketball layup"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "b2b2bb07",
+        "label": [
+            "climbing"
+        ],
+        "distractors": [
+            "playing acoustic guitar",
+            "playing guitar",
+            "boxing"
+        ],
+        "avatar": "man",
+        "action": "Climbing01",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Climbing01_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "climbing",
+        "options": [
+            "playing acoustic guitar",
+            "climbing",
+            "boxing",
+            "playing guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "15de8444",
+        "label": [
+            "basketball shot"
+        ],
+        "distractors": [
+            "pushing",
+            "checking phone",
+            "boxing uppercut"
+        ],
+        "avatar": "man",
+        "action": "BasketballShot02",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_BasketballShot02_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "basketball shot",
+        "options": [
+            "checking phone",
+            "basketball shot",
+            "pushing",
+            "boxing uppercut"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "f3b0070b",
+        "label": [
+            "checking watch"
+        ],
+        "distractors": [
+            "shooting handgun",
+            "typing on keyboard",
+            "tennis swing"
+        ],
+        "avatar": "man",
+        "action": "CheckingWatch001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_CheckingWatch001_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "checking watch",
+        "options": [
+            "shooting handgun",
+            "checking watch",
+            "typing on keyboard",
+            "tennis swing"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "10bfd70b",
+        "label": [
+            "receiving volleyball"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "sending text",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Volleyball001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Volleyball001_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "receiving volleyball",
+        "options": [
+            "playing guitar",
+            "receiving volleyball",
+            "back stroke swimming",
+            "sending text"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "a910e17c",
+        "label": [
+            "double arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "playing piano",
+            "using phone",
+            "backhand tennis swing"
+        ],
+        "avatar": "man",
+        "action": "ArmCurls03",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_ArmCurls03_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "weightlifting",
+        "options": [
+            "using phone",
+            "weightlifting",
+            "playing piano",
+            "backhand tennis swing"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "014c1e38",
+        "label": [
+            "golf put"
+        ],
+        "distractors": [
+            "watching tv",
+            "kicking",
+            "boxing uppercut"
+        ],
+        "avatar": "man",
+        "action": "GolfPutting001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_GolfPutting001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "golf put",
+        "options": [
+            "watching tv",
+            "kicking",
+            "boxing uppercut",
+            "golf put"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "69a5a83a",
+        "label": [
+            "pulling",
+            "dragging"
+        ],
+        "distractors": [
+            "butterfly stroke swimming",
+            "golf put",
+            "basketball layup"
+        ],
+        "avatar": "man",
+        "action": "Pulling001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Pulling001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "pulling",
+        "options": [
+            "butterfly stroke swimming",
+            "basketball layup",
+            "pulling",
+            "golf put"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "0c95d05e",
+        "label": [
+            "playing harp"
+        ],
+        "distractors": [
+            "shooting handgun",
+            "shooting arrow",
+            "basketball shot"
+        ],
+        "avatar": "man",
+        "action": "PlayingHarp001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_PlayingHarp001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing harp",
+        "options": [
+            "playing harp",
+            "shooting handgun",
+            "shooting arrow",
+            "basketball shot"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "e79a8cb8",
+        "label": [
+            "shooting rifle"
+        ],
+        "distractors": [
+            "playing harp",
+            "knocking on door",
+            "driving"
+        ],
+        "avatar": "man",
+        "action": "ShootingARifle001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_ShootingARifle001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting rifle",
+        "options": [
+            "shooting rifle",
+            "playing harp",
+            "knocking on door",
+            "driving"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "f6b51664",
+        "label": [
+            "fencing"
+        ],
+        "distractors": [
+            "back stroke swimming",
+            "volleyball serve",
+            "weighted back squat"
+        ],
+        "avatar": "man",
+        "action": "Fencing001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Fencing001_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "fencing",
+        "options": [
+            "volleyball serve",
+            "fencing",
+            "weighted back squat",
+            "back stroke swimming"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "0bcbc54d",
+        "label": [
+            "deadlift"
+        ],
+        "distractors": [
+            "sending text",
+            "shooting handgun",
+            "basketball floater"
+        ],
+        "avatar": "man",
+        "action": "Deadlift01",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Deadlift01_angle270_blank.mp4",
+        "split": "val",
+        "mcq_label": "deadlift",
+        "options": [
+            "sending text",
+            "basketball floater",
+            "shooting handgun",
+            "deadlift"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "d13251d3",
+        "label": [
+            "shooting arrow"
+        ],
+        "distractors": [
+            "butterfly stroke swimming",
+            "basketball layup",
+            "basketball floater"
+        ],
+        "avatar": "man",
+        "action": "Archery01",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Archery01_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting arrow",
+        "options": [
+            "basketball floater",
+            "shooting arrow",
+            "butterfly stroke swimming",
+            "basketball layup"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "467b9e55",
+        "label": [
+            "checking phone",
+            "sending text",
+            "using phone"
+        ],
+        "distractors": [
+            "playing drums",
+            "soccer shot",
+            "tennis serve"
+        ],
+        "avatar": "man",
+        "action": "CheckingPhone002",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_CheckingPhone002_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "sending text",
+        "options": [
+            "playing drums",
+            "sending text",
+            "soccer shot",
+            "tennis serve"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "0504b66c",
+        "label": [
+            "shooting handgun"
+        ],
+        "distractors": [
+            "checking watch",
+            "fencing",
+            "knocking on door"
+        ],
+        "avatar": "man",
+        "action": "ShootingAHandgun001",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_ShootingAHandgun001_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "shooting handgun",
+        "options": [
+            "fencing",
+            "knocking on door",
+            "shooting handgun",
+            "checking watch"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "158d76ce",
+        "label": [
+            "basketball layup",
+            "basketball floater"
+        ],
+        "distractors": [
+            "backhand tennis swing",
+            "shooting arrow",
+            "playing acoustic guitar"
+        ],
+        "avatar": "man",
+        "action": "BasketballLayup02",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_BasketballLayup02_angle270_blank.mp4",
+        "split": "train",
+        "mcq_label": "basketball layup",
+        "options": [
+            "backhand tennis swing",
+            "basketball layup",
+            "shooting arrow",
+            "playing acoustic guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "5808d14c",
+        "label": [
+            "playing piano"
+        ],
+        "distractors": [
+            "knocking on door",
+            "drinking out of a cup",
+            "backhand tennis swing"
+        ],
+        "avatar": "man",
+        "action": "Piano002",
+        "angle": "270",
+        "background": "blank",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Piano002_angle270_blank.mp4",
+        "split": "test",
+        "mcq_label": "playing piano",
+        "options": [
+            "backhand tennis swing",
+            "drinking out of a cup",
+            "playing piano",
+            "knocking on door"
+        ],
+        "label_idx": 2
+    }
+]

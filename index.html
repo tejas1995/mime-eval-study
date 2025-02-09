@@ -57,7 +57,7 @@
 
         <div class="main_box" id="main_box_experiment" style="display: none">
             <div id="video_box" align="center">
-                <video width="640" height="360" controls id="mime_video">
+                <video autoplay="autoplay" width="640" height="360" controls id="mime_video">
                     <source src="" type="video/mp4" id="video">
                   Your browser does not support the video tag.
                   </video>
@@ -67,7 +67,21 @@
                 <p style="font-size: 1.17em;">What action is being mimed by the person here? Answer in 1-2 words.</p>
                 <input type="text" id="user_prediction" name="user_prediction" style="width: 300px; height: 30px; font-size: 1.17em; text-align: left;">
             </div>
-            <br><br>
+            <br>
+            <input id="button_submit" type="button" class="button-neutral" value="Submit">
+            <br>
+            <div id="mcq_box">
+                <h3>Select the correct action from the following options</h3>
+                <h3>Option 1: <span id="option1_span"></span></h3>
+                <h3>Option 2: <span id="option2_span"></span></h3>
+                <h3>Option 3: <span id="option3_span"></span></h3>
+                <h3>Option 4: <span id="option4_span"></span></h3>
+                <input id="button_option1" type="button" class="button-neutral button-decision-option1" value="Option 1">
+                <input id="button_option2" type="button" class="button-neutral button-decision-option2" value="Option 2">
+                <input id="button_option3" type="button" class="button-neutral button-decision-option3" value="Option 3">
+                <input id="button_option4" type="button" class="button-neutral button-decision-option4" value="Option 4">
+            </div>
+            <br>
 
             <!-- <input id="button_place_bet" type="button" class="button-neutral" value="See the result"> -->
             <input id="button_next" type="button" class="button-neutral" value="Next question">
