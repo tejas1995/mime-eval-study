@@ -1,0 +1,1090 @@
+[
+    {
+        "sample_id": "28f8aa37",
+        "label": [
+            "taking photo"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "TakingPhotoWithCamera001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_TakingPhotoWithCamera001_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "taking photo",
+        "options": [
+            "bowling",
+            "boxing uppercut",
+            "taking photo",
+            "playing guitar"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "42163237",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "basketball floater",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pushing003",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Pushing003_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pushing",
+        "options": [
+            "pushing",
+            "playing guitar",
+            "basketball floater",
+            "using phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "ca8dcb57",
+        "label": [
+            "butterfly stroke swimming"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "alternating single arm curls",
+            "dragging"
+        ],
+        "avatar": "man",
+        "action": "Swimming03",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Swimming03_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "butterfly stroke swimming",
+        "options": [
+            "dragging",
+            "alternating single arm curls",
+            "butterfly stroke swimming",
+            "boxing uppercut"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "f6d3bdc5",
+        "label": [
+            "deadlift"
+        ],
+        "distractors": [
+            "throwing dart",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Deadlift01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Deadlift01_angle0_classroom.mp4",
+        "background_name": "classroom",
+        "mcq_label": "deadlift",
+        "options": [
+            "playing guitar",
+            "deadlift",
+            "bowling",
+            "throwing dart"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "1597d4e4",
+        "label": [
+            "playing violin"
+        ],
+        "distractors": [
+            "basketball floater",
+            "alternating single arm curls",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "Violin002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Violin002_angle0_beach.mp4",
+        "background_name": "beach",
+        "mcq_label": "playing violin",
+        "options": [
+            "playing violin",
+            "alternating single arm curls",
+            "basketball floater",
+            "butterfly stroke swimming"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "d3e55f67",
+        "label": [
+            "gaming",
+            "using phone"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "alternating single arm curls",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "ConsoleGaming01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_ConsoleGaming01_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "using phone",
+        "options": [
+            "boxing uppercut",
+            "alternating single arm curls",
+            "using phone",
+            "butterfly stroke swimming"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "046e97cc",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "basketball floater",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pushing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Pushing001_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pushing",
+        "options": [
+            "basketball floater",
+            "pushing",
+            "using phone",
+            "playing guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "27eea189",
+        "label": [
+            "knocking on door"
+        ],
+        "distractors": [
+            "clean and jerk",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "KnockingOnADoor001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_KnockingOnADoor001_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "knocking on door",
+        "options": [
+            "bowling",
+            "clean and jerk",
+            "knocking on door",
+            "playing guitar"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "01ac1bf2",
+        "label": [
+            "typing on keyboard"
+        ],
+        "distractors": [
+            "tugging",
+            "javelin throw",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "KeyboardTyping03",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_KeyboardTyping03_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "typing on keyboard",
+        "options": [
+            "javelin throw",
+            "typing on keyboard",
+            "tugging",
+            "butterfly stroke swimming"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "e983fd12",
+        "label": [
+            "fishing"
+        ],
+        "distractors": [
+            "tugging",
+            "playing piano",
+            "shooting arrow"
+        ],
+        "avatar": "man",
+        "action": "Fishing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Fishing001_angle0_living_room.mp4",
+        "background_name": "living_room",
+        "mcq_label": "fishing",
+        "options": [
+            "fishing",
+            "playing piano",
+            "shooting arrow",
+            "tugging"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "45cd63d0",
+        "label": [
+            "dragging",
+            "pulling"
+        ],
+        "distractors": [
+            "basketball floater",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pulling01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Pulling01_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pulling",
+        "options": [
+            "playing guitar",
+            "alternating single arm curls",
+            "basketball floater",
+            "pulling"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "dccbd31c",
+        "label": [
+            "weighted back squat",
+            "weightlifting"
+        ],
+        "distractors": [
+            "basketball floater",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "WeightedSquat002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_WeightedSquat002_angle0_classroom.mp4",
+        "background_name": "classroom",
+        "mcq_label": "weightlifting",
+        "options": [
+            "bowling",
+            "weightlifting",
+            "playing guitar",
+            "basketball floater"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "6ffdcd96",
+        "label": [
+            "basketball shot"
+        ],
+        "distractors": [
+            "playing harp",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "BasketballShot02",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_BasketballShot02_angle0_living_room.mp4",
+        "background_name": "living_room",
+        "mcq_label": "basketball shot",
+        "options": [
+            "playing harp",
+            "basketball shot",
+            "using phone",
+            "playing guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "1e75f027",
+        "label": [
+            "checking phone",
+            "sending text",
+            "using phone"
+        ],
+        "distractors": [
+            "basketball floater",
+            "javelin throw",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "CheckingPhone002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_CheckingPhone002_angle0_volleyball_court.mp4",
+        "background_name": "volleyball_court",
+        "mcq_label": "checking phone",
+        "options": [
+            "javelin throw",
+            "basketball floater",
+            "checking phone",
+            "butterfly stroke swimming"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "4b1433c3",
+        "label": [
+            "shooting handgun"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "ShootingAHandgun001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_ShootingAHandgun001_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "shooting handgun",
+        "options": [
+            "playing guitar",
+            "using phone",
+            "boxing uppercut",
+            "shooting handgun"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "0af5fcee",
+        "label": [
+            "drinking out of a cup"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "DrinkingCoffee001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_DrinkingCoffee001_angle0_volleyball_court.mp4",
+        "background_name": "volleyball_court",
+        "mcq_label": "drinking out of a cup",
+        "options": [
+            "drinking out of a cup",
+            "using phone",
+            "playing guitar",
+            "boxing uppercut"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "2da3d863",
+        "label": [
+            "golf swing"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "GolfSwing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_GolfSwing001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "golf swing",
+        "options": [
+            "golf swing",
+            "alternating single arm curls",
+            "boxing uppercut",
+            "playing guitar"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "81454cc0",
+        "label": [
+            "playing drums"
+        ],
+        "distractors": [
+            "throwing dart",
+            "using phone",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "PlayingDrums03",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_PlayingDrums03_angle0_beach.mp4",
+        "background_name": "beach",
+        "mcq_label": "playing drums",
+        "options": [
+            "using phone",
+            "butterfly stroke swimming",
+            "throwing dart",
+            "playing drums"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "e7cba711",
+        "label": [
+            "tennis serve"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "TennisServe02",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_TennisServe02_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "tennis serve",
+        "options": [
+            "boxing uppercut",
+            "playing guitar",
+            "tennis serve",
+            "using phone"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "5b665b51",
+        "label": [
+            "playing electric guitar"
+        ],
+        "distractors": [
+            "clean and jerk",
+            "alternating single arm curls",
+            "dragging"
+        ],
+        "avatar": "man",
+        "action": "PlayingAGuitar004",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_PlayingAGuitar004_angle0_beach.mp4",
+        "background_name": "beach",
+        "mcq_label": "playing electric guitar",
+        "options": [
+            "clean and jerk",
+            "alternating single arm curls",
+            "dragging",
+            "playing electric guitar"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "29277820",
+        "label": [
+            "tennis serve"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "TennisServe001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_TennisServe001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "tennis serve",
+        "options": [
+            "playing guitar",
+            "using phone",
+            "tennis serve",
+            "boxing uppercut"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "c3729f5c",
+        "label": [
+            "tennis swing"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "TennisSwing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_TennisSwing001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "tennis swing",
+        "options": [
+            "boxing uppercut",
+            "playing guitar",
+            "alternating single arm curls",
+            "tennis swing"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "1fb4e182",
+        "label": [
+            "dragging",
+            "pulling"
+        ],
+        "distractors": [
+            "basketball floater",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pulling002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Pulling002_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pulling",
+        "options": [
+            "playing guitar",
+            "pulling",
+            "basketball floater",
+            "alternating single arm curls"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "343d02f0",
+        "label": [
+            "baseball pitch"
+        ],
+        "distractors": [
+            "boxing uppercut",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "BaseballPitch002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_BaseballPitch002_angle0_living_room.mp4",
+        "background_name": "living_room",
+        "mcq_label": "baseball pitch",
+        "options": [
+            "using phone",
+            "baseball pitch",
+            "playing guitar",
+            "boxing uppercut"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "46c94bc8",
+        "label": [
+            "boxing"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Boxing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Boxing001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "boxing",
+        "options": [
+            "boxing",
+            "tugging",
+            "playing guitar",
+            "using phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "fe60bf03",
+        "label": [
+            "fencing"
+        ],
+        "distractors": [
+            "playing harp",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Fencing001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Fencing001_angle0_living_room.mp4",
+        "background_name": "living_room",
+        "mcq_label": "fencing",
+        "options": [
+            "playing guitar",
+            "bowling",
+            "fencing",
+            "playing harp"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "aa0d563e",
+        "label": [
+            "double arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "basketball floater",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "ArmCurls03",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_ArmCurls03_angle0_classroom.mp4",
+        "background_name": "classroom",
+        "mcq_label": "double arm curls",
+        "options": [
+            "basketball floater",
+            "double arm curls",
+            "playing guitar",
+            "using phone"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "e3effd7b",
+        "label": [
+            "pulling",
+            "dragging"
+        ],
+        "distractors": [
+            "throwing dart",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pulling001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Pulling001_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pulling",
+        "options": [
+            "pulling",
+            "throwing dart",
+            "playing guitar",
+            "using phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "4c342568",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "DrivingSitting001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_DrivingSitting001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "driving",
+        "options": [
+            "playing guitar",
+            "tugging",
+            "using phone",
+            "driving"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "a26e32d9",
+        "label": [
+            "controlling remote",
+            "watching tv"
+        ],
+        "distractors": [
+            "throwing dart",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "WatchingTV01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_WatchingTV01_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "controlling remote",
+        "options": [
+            "alternating single arm curls",
+            "controlling remote",
+            "throwing dart",
+            "playing guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "525c6db9",
+        "label": [
+            "backhand tennis swing",
+            "cricket batting"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "TennisSwing02",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_TennisSwing02_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "cricket batting",
+        "options": [
+            "cricket batting",
+            "tugging",
+            "playing guitar",
+            "using phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "ba00698d",
+        "label": [
+            "throwing dart"
+        ],
+        "distractors": [
+            "playing harp",
+            "alternating single arm curls",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Darts001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Darts001_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "throwing dart",
+        "options": [
+            "alternating single arm curls",
+            "playing harp",
+            "throwing dart",
+            "playing guitar"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "a3870e79",
+        "label": [
+            "pushing"
+        ],
+        "distractors": [
+            "basketball floater",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Pushing02",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Pushing02_angle0_climbing_gym.mp4",
+        "background_name": "climbing_gym",
+        "mcq_label": "pushing",
+        "options": [
+            "pushing",
+            "using phone",
+            "basketball floater",
+            "playing guitar"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "2ad3a92e",
+        "label": [
+            "playing guitar"
+        ],
+        "distractors": [
+            "basketball floater",
+            "alternating single arm curls",
+            "dragging"
+        ],
+        "avatar": "man",
+        "action": "PlayingGuitar02",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_PlayingGuitar02_angle0_beach.mp4",
+        "background_name": "beach",
+        "mcq_label": "playing guitar",
+        "options": [
+            "alternating single arm curls",
+            "dragging",
+            "playing guitar",
+            "basketball floater"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "758f3b6b",
+        "label": [
+            "bowling"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "Bowling003",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_Bowling003_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "bowling",
+        "options": [
+            "bowling",
+            "using phone",
+            "playing guitar",
+            "tugging"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "30dd2562",
+        "label": [
+            "soccer shot",
+            "kicking"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "SoccerShot01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_SoccerShot01_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "kicking",
+        "options": [
+            "playing guitar",
+            "using phone",
+            "tugging",
+            "kicking"
+        ],
+        "label_idx": 3
+    },
+    {
+        "sample_id": "7f46e81f",
+        "label": [
+            "climbing"
+        ],
+        "distractors": [
+            "clean and jerk",
+            "alternating single arm curls",
+            "butterfly stroke swimming"
+        ],
+        "avatar": "man",
+        "action": "Climbing01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_Climbing01_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "climbing",
+        "options": [
+            "alternating single arm curls",
+            "clean and jerk",
+            "climbing",
+            "butterfly stroke swimming"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "84e17394",
+        "label": [
+            "volleyball serve"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "VolleyballServe",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_VolleyballServe_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "volleyball serve",
+        "options": [
+            "volleyball serve",
+            "playing guitar",
+            "tugging",
+            "using phone"
+        ],
+        "label_idx": 0
+    },
+    {
+        "sample_id": "a8d90979",
+        "label": [
+            "opening door"
+        ],
+        "distractors": [
+            "clean and jerk",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "OpeningADoor002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_OpeningADoor002_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "opening door",
+        "options": [
+            "playing guitar",
+            "bowling",
+            "opening door",
+            "clean and jerk"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "cf2863f7",
+        "label": [
+            "playing harp"
+        ],
+        "distractors": [
+            "basketball floater",
+            "javelin throw",
+            "dragging"
+        ],
+        "avatar": "man",
+        "action": "PlayingHarp002",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_PlayingHarp002_angle0_beach.mp4",
+        "background_name": "beach",
+        "mcq_label": "playing harp",
+        "options": [
+            "basketball floater",
+            "playing harp",
+            "javelin throw",
+            "dragging"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "f60d034a",
+        "label": [
+            "opening door"
+        ],
+        "distractors": [
+            "clean and jerk",
+            "bowling",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "OpeningADoor001",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Justin_OpeningADoor001_angle0_golf_course.mp4",
+        "background_name": "golf_course",
+        "mcq_label": "opening door",
+        "options": [
+            "bowling",
+            "opening door",
+            "clean and jerk",
+            "playing guitar"
+        ],
+        "label_idx": 1
+    },
+    {
+        "sample_id": "8ac16ccb",
+        "label": [
+            "double arm curls",
+            "arm curls",
+            "weightlifting"
+        ],
+        "distractors": [
+            "basketball floater",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "ArmCurls01",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_ArmCurls01_angle0_classroom.mp4",
+        "background_name": "classroom",
+        "mcq_label": "double arm curls",
+        "options": [
+            "playing guitar",
+            "basketball floater",
+            "double arm curls",
+            "using phone"
+        ],
+        "label_idx": 2
+    },
+    {
+        "sample_id": "698cfaf4",
+        "label": [
+            "driving"
+        ],
+        "distractors": [
+            "tugging",
+            "using phone",
+            "playing guitar"
+        ],
+        "avatar": "man",
+        "action": "DrivingSittingDown03",
+        "angle": "0",
+        "background_config": "misaligned",
+        "s3_url": "https://mime-understanding.s3.amazonaws.com/man_Natali_DrivingSittingDown03_angle0_concert_hall.mp4",
+        "background_name": "concert_hall",
+        "mcq_label": "driving",
+        "options": [
+            "driving",
+            "tugging",
+            "playing guitar",
+            "using phone"
+        ],
+        "label_idx": 0
+    }
+]
